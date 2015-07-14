@@ -1,0 +1,597 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  10 JUL 2015 17:24
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**RelazioneISS.tex
+(./RelazioneISS.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./llncs.cls
+Document Class: llncs 2004/08/17 v2.14 
+ LaTeX document class for Lecture Notes in Computer Science
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
+\c@tracingmulticols=\count87
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count88
+\c@collectmore=\count89
+\doublecol@number=\count90
+\multicoltolerance=\count91
+\multicolpretolerance=\count92
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen108
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count93
+\c@finalcolumnbadness=\count94
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count95
+)
+\c@chapter=\count96
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 360.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 361.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
+\tocchpnum=\dimen112
+\tocsecnum=\dimen113
+\tocsectotal=\dimen114
+\tocsubsecnum=\dimen115
+\tocsubsectotal=\dimen116
+\tocsubsubsecnum=\dimen117
+\tocsubsubsectotal=\dimen118
+\tocparanum=\dimen119
+\tocparatotal=\dimen120
+\tocsubparanum=\dimen121
+\@tempcntc=\count97
+\fnindent=\dimen122
+\c@@inst=\count98
+\c@@auth=\count99
+\c@auco=\count100
+\instindent=\dimen123
+\authrun=\box52
+\authorrunning=\toks14
+\tocauthor=\toks15
+\titrun=\box53
+\titlerunning=\toks16
+\toctitle=\toks17
+\c@theorem=\count101
+\c@case=\count102
+\c@conjecture=\count103
+\c@corollary=\count104
+\c@definition=\count105
+\c@example=\count106
+\c@exercise=\count107
+\c@lemma=\count108
+\c@note=\count109
+\c@problem=\count110
+\c@property=\count111
+\c@proposition=\count112
+\c@question=\count113
+\c@solution=\count114
+\c@remark=\count115
+\headlineindent=\dimen124
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2014/04/30 v1.2b Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2014/04/30 v1.2b Input encoding file
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
+\babel@savecnt=\count116
+\U@D=\dimen125
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+) (./manifest.sty
+File: manifest.sty 2010/03/09 Package for adding categories, terms and keywords
+ to llncs style
+\catcount=\count117
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count118
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+(./RelazioneISS.aux)
+\openout1 = `RelazioneISS.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen128
+\scratchbox=\box54
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen129
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+
+
+! Package ifpdf Error: Name clash, \ifpdf is already defined.
+
+See the ifpdf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173     }
+           %
+Incompatible versions of \ifpdf can cause problems,
+therefore package loading is aborted.
+
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.jpg,.tif,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 118.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 118.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 118.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 175.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 175.
+ [2]
+Overfull \hbox (8.23828pt too wide) in paragraph at lines 205--207
+\T1/cmr/m/n/10 pre-senta la stessa strut-tura a fronte di cam-bi-a-menti di con
+-dizioni dell'ambiente. 
+ []
+
+[3] <img/caso_uso_2.jpg, id=20, 550.30594pt x 389.20406pt>
+File: img/caso_uso_2.jpg Graphic file (type jpg)
+
+<use img/caso_uso_2.jpg>
+Package pdftex.def Info: img/caso_uso_2.jpg used on input line 228.
+(pdftex.def)             Requested size: 275.1523pt x 194.60155pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./img/caso_uso_2.jpg>] <img/robot_models.jpg, id=24, 682.55pt x 533.995pt>
+File: img/robot_models.jpg Graphic file (type jpg)
+
+<use img/robot_models.jpg>
+Package pdftex.def Info: img/robot_models.jpg used on input line 271.
+(pdftex.def)             Requested size: 341.27417pt x 266.99684pt.
+
+Overfull \hbox (11.95062pt too wide) in paragraph at lines 265--274
+[][] 
+ []
+
+
+Underfull \vbox (badness 3668) has occurred while \output is active []
+
+ [5]
+<img/sensor_models.jpg, id=28, 871.255pt x 917.4275pt>
+File: img/sensor_models.jpg Graphic file (type jpg)
+
+<use img/sensor_models.jpg>
+Package pdftex.def Info: img/sensor_models.jpg used on input line 286.
+(pdftex.def)             Requested size: 348.49583pt x 366.96451pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--289
+
+ []
+
+
+Overfull \hbox (4.17229pt too wide) in paragraph at lines 276--289
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./img/robot_models.jpg>] [7 <./img/sensor_models.jpg>]
+Overfull \hbox (1.23999pt too wide) in paragraph at lines 313--314
+\T1/cmr/m/n/10 sid-era l'utilizzo di un buffer, senza al-cuna lim-i-tazione sul
+la di-men-sione, questo
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 324--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--346
+
+ []
+
+[9] <img/structure_plan.jpg, id=42, 923.45pt x 759.83875pt>
+File: img/structure_plan.jpg Graphic file (type jpg)
+
+<use img/structure_plan.jpg>
+Package pdftex.def Info: img/structure_plan.jpg used on input line 366.
+(pdftex.def)             Requested size: 350.91464pt x 288.74171pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--374
+
+ []
+
+
+Overfull \hbox (6.5911pt too wide) in paragraph at lines 355--374
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--374
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+<img/struct_arch_logic.jpg, id=47, 575.14874pt x 667.49374pt>
+File: img/struct_arch_logic.jpg Graphic file (type jpg)
+
+<use img/struct_arch_logic.jpg>
+Package pdftex.def Info: img/struct_arch_logic.jpg used on input line 397.
+(pdftex.def)             Requested size: 230.05542pt x 266.99277pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--406
+
+ []
+
+
+Overfull \hbox (2.65216pt too wide) in paragraph at lines 388--406
+\T1/cmr/m/n/10 così il robot ed iden-ti-f-i-cando il con-testo di es-e-cuzione 
+del pi-ano stesso. Un'ulteriore
+ []
+
+[11 <./img/structure_plan.jpg>] [12 <./img/struct_arch_logic.jpg>]
+<img/interaction_arch_logic.jpg, id=54, 851.18pt x 578.16pt>
+File: img/interaction_arch_logic.jpg Graphic file (type jpg)
+
+<use img/interaction_arch_logic.jpg>
+Package pdftex.def Info: img/interaction_arch_logic.jpg used on input line 432.
+
+(pdftex.def)             Requested size: 340.46596pt x 231.2599pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--435
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+<img/comp_arch_logic.jpg, id=59, 511.9125pt x 407.5225pt>
+File: img/comp_arch_logic.jpg Graphic file (type jpg)
+
+<use img/comp_arch_logic.jpg>
+Package pdftex.def Info: img/comp_arch_logic.jpg used on input line 445.
+(pdftex.def)             Requested size: 307.14987pt x 244.51538pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--453
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./img/interaction_arch_logic.jpg>] [15 <./img/comp_arch_logic.jpg>]
+<img/layer.jpg, id=66, 712.6625pt x 537.00626pt>
+File: img/layer.jpg Graphic file (type jpg)
+ <use img/layer.jpg>
+Package pdftex.def Info: img/layer.jpg used on input line 469.
+(pdftex.def)             Requested size: 427.6008pt x 322.20624pt.
+
+Overfull \hbox (86.16774pt too wide) in paragraph at lines 469--470
+[][]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--475
+
+ []
+
+[16 <./img/layer.jpg>] [17] [18] <img/ale.jpg, id=76, 171.4405pt x 200.75pt>
+File: img/ale.jpg Graphic file (type jpg)
+
+<use img/ale.jpg>
+Package pdftex.def Info: img/ale.jpg used on input line 543.
+(pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
+ <img/bea.jpg, id=77, 168.63pt x 196.48407pt>
+File: img/bea.jpg Graphic file (type jpg)
+
+<use img/bea.jpg>
+Package pdftex.def Info: img/bea.jpg used on input line 543.
+(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
+ <img/io.jpg, id=78, 177.66376pt x 188.705pt>
+File: img/io.jpg Graphic file (type jpg)
+
+<use img/io.jpg>
+Package pdftex.def Info: img/io.jpg used on input line 543.
+(pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
+
+No file RelazioneISS.bbl.
+[19 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2772 strings out of 493117
+ 37093 string characters out of 6135434
+ 109399 words of memory out of 5000000
+ 6187 multiletter control sequences out of 15000+600000
+ 12697 words of font info for 30 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,13n,23p,1023b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on RelazioneISS.pdf (19 pages, 1018986 bytes).
+PDF statistics:
+ 114 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+
