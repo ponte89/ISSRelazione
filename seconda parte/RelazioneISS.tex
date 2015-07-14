@@ -162,10 +162,9 @@ Le linee guida alle quali si decide di ispirarsi sono quelle dettate dalla metod
 \subsection{Fase 2}
 Progettare un sistema software che:
 \begin{itemize}
-	\item Permetta di specificare un?azione temporizzata: ovvero esplicitando direttamente la durata dell?azione all?interno comando impartito al Differential Drive Robot (DDR).
-	\item Permetta di definire azioni interrompibili: ovvero il robot è in grado di interrrompere l?esecuzione di un comando in seguito alla ricezione un segnale di halt proveniente da una console remota.
-	\item Permette di controllare un DDR attraverso una console remota: ovvero inviare comandi al robot il quale deve essere in grado di interpretarli ed agire di conseguenza.
-	
+	\item Permetta di specificare un'azione temporizzata: ovvero esplicitando direttamente la durata dell?azione all'interno comando impartito al Differential Drive Robot (DDR).
+	\item Permetta di definire azioni interrompibili: ovvero il robot è in grado di interrrompere l'esecuzione di un comando in seguito alla ricezione un segnale di halt proveniente da una console remota.
+	\item Permette di controllare un DDR attraverso una console remota: ovvero inviare comandi al robot il quale deve essere in grado di interpretarli ed agire di conseguenza.	
 \end{itemize}
 
 %===========================================================================
@@ -175,7 +174,7 @@ Progettare un sistema software che:
 \section{Requirement analysis}
 \labelsec{ReqAnalysis}
 
-Avendo definto i requisiti nella prima relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, si specificano in manierea più approfondita delle aree che non erano state identificate:
+Avendo definto i requisiti nella prima relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, si specificano in maniera più approfondita delle aree che non erano state identificate:
 \begin{itemize}
 	\item Definizione di piano di azioni;
 	\item Definizione di azione temporizzata;
@@ -184,13 +183,13 @@ Avendo definto i requisiti nella prima relazione\footnote{Ingegneria dei Sistemi
 \end{itemize}
 
 \subsection{Piano di azioni}
-Un piano a questo livello può essere indetificato da un nome e composto da una serie di azioni che dovranno essere performate dal robot.
+Un piano a questo livello può essere identificato da un nome e composto da una serie di azioni che dovranno essere performate dal robot.
 
 \subsection{Azione temporizzata}
  Comando impartito al robot che prevede nella sua definizione oltre al tipo di azione anche la sua effettiva durata.
 
 \subsection{Azione interrompibile}
-Azione che prevede una esecuzione con tipologia asincrona ovvero all'interno del proprio piano, una azione asincrona prevede la possibilità di essere interrotta alla ricezione di una nuova azione o di un comando halt proveniente dalla console.
+Azione che prevede una esecuzione con tipologia asincrona ovvero all'interno del proprio piano, una azione asincrona prevede la possibilità di essere interrotta alla ricezione di una nuova azione o di un comando di halt proveniente dalla console.
 
 \subsection{Console remota}
 La console remota riveste il ruolo di emittente di determinati segnali in grado di essere captati e interpretati dal robot specifico.
@@ -199,90 +198,87 @@ La console remota riveste il ruolo di emittente di determinati segnali in grado 
 \subsection{Use cases}
 \labelssec{UseCases}
 
-%\begin{tabular}{ | c | }
-%	\hline
-%	Fase 1 \\
-%	\hline
-%	\hline
-%	\includegraphics[scale = 0.5]{img/caso_uso_2.jpg}\\
-%	\hline
-%\end{tabular}
+\begin{tabular}{ | c | }
+	\hline
+	Fase 2 \\
+	\hline
+	\hline
+	\includegraphics[scale = 0.5]{img/casoUso.jpg}\\
+	\hline
+\end{tabular}
 
 \subsection{Scenarios}
 \labelssec{Scenarios}
 
-%\begin{tabular}{|p{4.0cm}|p{8.0cm}|}
-%	\hline
-%	ID: & Movimento autonomo.\\
-%	\hline
-%	Descrizione: & Il robot si muove da un punto A1 ad un punto A2 in maniera autonoma \\ 
-%	\hline
-%	Attore: & Robot \\
-%	\hline
-%	Precondizione: & Il robot deve essere acceso e deve arrivare in A1. \\
-%	\hline
-%	Scenario Principale: & Vengono eseguiti i comandi del piano per portarlo in A2, nel frattempo potrei anche attraversare l'area sensibile e quindi individuarne l'ingresso e l'uscita. \\
-%	\hline
-%	Scenario Secondario: & Se venisse percepito un comando di halt da console remota, il sistema e quindi il robot si ferma.\\
-%	\hline
-%	Postcondizione: & Il robot è in A2. \\
-%	\hline
-%\end{tabular}
+\begin{tabular}{|p{4.0cm}|p{8.0cm}|}
+	\hline
+	ID: & Movimento autonomo temporizzato.\\
+	\hline
+	Descrizione: & Il robot esegue un piano che comprende azioni temporizzate. \\ 
+	\hline
+	Attore: & Robot \\
+	\hline
+	Precondizione: & Il robot deve essere acceso. \\
+	\hline
+	Scenario Principale: & Il robot sta eseguendo i comandi previsti dal piano specificato.\\
+	\hline
+	Scenario Secondario: & Assenti.\\
+	\hline
+	Postcondizione: & Assenti. \\
+	\hline
+\end{tabular}
+\\
+\\
+\\
+\begin{tabular}{|p{4.0cm}|p{8.0cm}|}
+	\hline
+	ID: & Ricezione comando "halt".\\
+	\hline
+	Descrizione: & Il sistema percepisce un comando "halt" inviato da console remota e reagisce interrompendo il piano in esecuzione. \\ 
+	\hline
+	Attore: & Utente \\
+	\hline
+	Precondizione: & Il robot deve essere acceso e si sta muovendo in maniera autonoma.\\
+	\hline
+	Scenario Principale: & Il robot termina il piano in esecuzione.\\
+	\hline
+	Scenario Secondario: & Assenti.\\
+	\hline
+	Postcondizione: & Il robot è fermo. \\
+	\hline
+\end{tabular}
+\\
+\\
+\\
+\begin{tabular}{|p{4.0cm}|p{8.0cm}|}
+	\hline
+	ID: & Ricezione comandi di movimento.\\
+	\hline
+	Descrizione: & Il robot percepisce un comando di movimento inviato da
+	console remota ed esegue l?azione corrispondente. \\ 
+	\hline
+	Attore: & Utente \\
+	\hline
+	Precondizione: & Il robot deve essere acceso.\\
+	\hline
+	Scenario Principale: & Il robot deve eseguire i comandi percepiti.\\
+	\hline
+	Scenario Secondario: & Assenti.\\
+	\hline
+	Postcondizione: & Il robot rimane in attesa di un comando. \\
+	\hline
+\end{tabular}
+
 
 \subsection{(Domain)model}
-In questa sezione viene analizzato il dominio fornito dall'attuale know-how aziendale. Esso viene descritto tramite una analisi incentrata sulle tre dimensioni fondamentali, caratteristiche di analisi del software\footnote{Corso: Ingegneria del Software }, ovvero: struttura, interazione e comportamento.
-Si identificano i seguenti componenti, le cui caratteristiche saranno specificate in sezioni apposite, che vengono utilizzate come base di partenza per la realizzazione del sistema:
-\begin{itemize}
-	\item BaseRobot;
-	\item Sensore;
-	\item Mossa/Comando.
-\end{itemize}
-
-\subsubsection{BaseRobot}
-Un BaseRobot è un componente POJO (Plain Old Java Object) ovvero un componente Java non legato ad alcuna restrizione diversa da quelle dovute dalle specifiche del linguaggio Java stesso, che può essere istanziato per eseguire una serie di comanditramite interazione a procedure-call. Esso rappresenta l'astrazione di un robot fisico costituito da una serie di attuatori ed anch'esso in grado di eseguire comandi predefiniti. In questa fase nulla più si può dire riguardo alla struttura fisica del robot stesso senza entrare troppo nel dettaglio, non essendo questa la parte di documentazione relativa al trattamento di certe specifiche.
-
-\begin{tabular}{ | c | }
-	\hline
-	Robot Models \\
-	\hline
-	\hline
-	
-	\includegraphics[scale = 0.5]{img/robot_models.jpg} \\
-	\hline
-\end{tabular}
-
-\subsubsection{Sensori}
-Il BaseRobot è equipaggiato on-board con una serie di sensori sempre del tipo POJO. Dal punto di vista del dominio, un sensore è un componente osservabile in grado di  raccogliere e gestire dei dati, di un tipo specifico, provenienti o da un trasduttore fisicamente esistente o da un componente che simula la generazione di quel tipo di dati. Oltre alla modalità appena descritta è possibile interrogare un sensore anche in modalità polling, ovvero a richiesta. I sensori presenti sono caratterizzati da una tipologia specifica che ne definisce l'uso e le funzionalità in relazione a tutti gli altri.
-\\
-\newline
-\\
-\begin{tabular}{ | c | }
-	\hline
-	Sensor Models \\
-	\hline
-	\hline
-	
-	\includegraphics[scale = 0.4]{img/sensor_models.jpg} \\
-	\hline
-\end{tabular}
-
-\subsubsection{Mossa/Comando}
-Un comando risulta essere un'istruzione di base per il robot che gli permette di effettuare qualcosa che ha un impatto sul mondo fisico nel quale il robot è situato.
-Le interfacce fornite prevedono la definizione di comandi a differenti livelli di specializzazione.
+Si veda la relazione precedente\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}.
 
 \subsection{Test plan}
 
 %===========================================================================
 \section{Problem analysis}
 \labelsec{ProblemAnalysis}
-Tramite la fase di analisi del modello del dominio, sono state descritte le specifiche del sistema in relazione alle richieste del committente, il successivo passo è quello di identificare il problema e svolgere un'analisi dello stesso iniziando ad identificare i sotto-sistemi che compongono il sistema nella sua interezza, e i loro componenti. Il tutto ha lo scopo di fornire un'\textbf{architettura logica} consona allo scopo identificato e di essere abbastanza flessibile da permettere di adattarsi senza troppe modifiche e problematiche, permettendo la definizione di un primo prototipo funzionante del sistema richiesto.
-L'ultimo tassello sarà la progettazione del sistema, prima di fare ciò però, occorre identificare l'abrastraction gap e i modi per poterlo colmare evidenziando inoltre i rischi e le modalità di fronteggiare lo stesso durante le successive fasi di sviluppo del software.
-Dopo aver fatto chiarezza sull'ambito di interesse del problema in questione avendo descritto il modello del dominio nel quale ci caliamo, si individuano le problematiche che ci si pongono davanti per portare a termine il progetto. Si cerca inoltre di ricondursi a problematiche ricorrenti fornendo concetti utili per affrontare le successive fasi previste di progettazione e realizzazione del prodotto finale.
-
-\subsection{Problematiche identificate}
-Ciò di cui disponiamo a questo livello è solo un componente POJO che realizza le caratteristiche associate ad un BaseRobot (precedentemente descritto nella sezione di analisi del dominio), da quanto studiato in Sistemi Intelligenti Robotici, e ripreso in maniera veloce nella fase di introduzione ai requisiti, il robot per funzionare ha bisogno di un componente apposito che ci permetta di controllarlo a livello applicativo. Si vuole, rimanendo fedeli a tale definizione, disaccoppiare il controllo dall'effettivo esecutore. Questo perchè risulta una scelta vincente dal punto di vista ingegneristico della separazione dei concetti. Per questo, come già accennato, si attua un modello in cui il robot viene comandato da un componente esterno che risulta essere la mind ovvero la mente di elaborazione.
-
-Dalla definizione dei requisiti si identifica inoltre come il sistema debba essere veicolato verso un'interazione distribuita sulla rete, dato che deve poter reagire al comando di halt proveniente appunto da remoto. L'astrazione di partenza, non è in grado di esprimere questa caratteristica (comunicazione tramite rete) ed è per questo che occorre aggiungere una serie di livelli applicativi che potranno andare a colmare le mancanze identificate.
+Rispetto alla fase precedente si deve considerare un sistema non più concentrato ma distribuito, infatti l'utilizzo della console remota rende necessaria la definizione della comunicazione tra quest?ultima e il robot che vede come mezzo comunicativo la rete.
 
 \subsubsection{Gestione dei messaggi}
 Ricopre un ruolo fondamentale la gestione dei messaggi i quali, come già detto possono essere interni al robot per l'esecuzione di una determinata operazione, oppure esterni e quindi dettati da una console remota.
@@ -299,58 +295,12 @@ Un'ulteriore suddivisione che si può attuare sulle specifiche dei messaggi è:
 	\item DISPATCH: Forma di comunicazione in cui il mittente invia un messaggio e si aspetta un messaggio di risposta conforme a quanto richiesto, con l'assunzione della effettivo soddisfacimento della richiesta.
 \end{itemize}
 
-\subsubsection{Gestione Sensori}
-Da quanto appreso nel modello del dominio, i sensori collegati al robot si comportano secondo il pattern Observer, questa caratteristica non risulta essere la più consona in quanto l'utilizzo di questo pattern porta con se features non consone all'obiettivo nostro.\\
-Nel nostro caso vi è una stretta relazione tra sorgente del segnale e observer, questa caratteristica mina la reattivita della sorgente. Quindi essendo il robot costituito da una serie di sensori, la gestione di numerosi observer può rallentare la generazione dei dati, anche in questo caso la colpa è da imputare al passaggio di flusso di controllo tra sorgente e observer.
-Dopo questa breve analisi si nota subito che una soluzione che sfrutta questa tecnologia non risulta consona al contesto verso cui si sta dirigendo il sistema, proprio per questo si vuole disaccoppiare il flusso di controllo.\\
-Un altro possibile approccio è quello appreso durante quest'ultimo anno\footnote{Corso: Programmazione Avanzata e Paradigmi} che getta le basi per una gestione event-driven, la quale permette di disaccoppiare sorgente e gestione dell'evento stesso. In questo caso il comportamento è organizzato in un insieme di handler che si occupano di gestire gli eventi, incapsulando la computazione da eseguire alla percezione di un determinato evento. L'esecuzione della computazione asincrona è atomica, gli eventi che si verificano durante tale esecuzione, sono inseriti in una coda di eventi, che viene utilizzata per tenere traccia degli eventi generati dall'ambiente e dagli handler stessi. 
-Il comportamento del sistema è rappresentato da un modello di esecuzione chiamato event-loop così definito:
-\\
-\newline
-\\
-\begin{tabular}{|p{8.0cm}|}
-\hline
-loop$\{$\\
-	Event ev = evQueue.remove()\\
-	Handler handler = selectHandler(ev)\\
-	execute(handler)\\
-$\}$
-\\
-\hline
-\end{tabular}
-\\
-\newline
-\\
-L'event-loop è definito internamente all'infrastruttura in modo da non essere visibile agli sviluppatori che si occuperanno unicamente di specificare la selezione e l'esecuzione degli handler. Nonostante i vantaggi di questo approccio, sono emerse anche alcune problematiche alle quali ci si riferisce con il termine \textbf{callback hell}, tra queste si individua un'alta frammentazione del codice in handler asincroni e l'innestarsi di callback che incrementano la complessità del codice, a sfavore di leggibilità, riusabilità ed estensione. Questo rende decisamente difficile la programmazione e le richieste relative alla verifica dello stato del mondo.
-
-
-Un approccio alternativo può essere definito con l'introduzione di un componente: il Task, che rappresenta un'entità autonoma che lavora in modo proattivo, tale comportamento è
-\textbf{event-based} e più precisamente un task potrebbe anche non terminare la proprio esecuzione. Il comportamento di un task è modellato come un automa a stati finiti che gestisce gli eventi in accordo con il suo stato interno. 
+Per la realizzazione di azioni temporizzate è necessario poter impartire comandi che già possano esprimere la durata dell'azione da svolgere. E' indispensabile un meccanismo che permetta di valutare l'effettiva durata dell'azione mentre questa viene eseguita, non permettendo l'esecuzione del comando successivo, fino a quando l'azione in corso non sarà terminata. Quindi risulta essenziale determinare ed individuare il concetto di "termine" del comando in esecuzione.\\
+Per definire azioni interrompibili è necessario che il flusso di esecuzione di comandi possa essere bloccato e di conseguenza sarà indispensabile sia poter percepire il segnale inviato dalla console remota sia che il sistema rimanga reattivo ed in grado di fermare il piano in corso di svolgimento.
+Infine, per gestire completamente le azioni eseguite dal robot tramite console remota, il DDR dev'essere in grado di riconoscere ed eseguire i comandi percepiti. 
 
 \subsubsection{CONCLUSIONI PARZIALI}
-Si è ora in grado di poter descrivere un sistema robotico in maniera abbastanza completa relativamente anche alle caratteristiche complesse dell'agente. La successiva caratteristica che emerge dai requisiti è quella di autonomia relativamente alle richieste dell'utente.
-Come descritto precedentemente, si parla di autonomia di un robot quando non è prevista l'interazione con l'utente durante l'esecuzione di un compito assegnato, quindi in grado di auto-governarsi seguendo leggi e strategie predeterminate.
-
-Il sistema in esame è in grado di darsi dei comandi e reagire in un certo modo nel momento in cui si verificano situazioni prestabilite. E' necessario definire un modello che definisca il comportamento standard del robot e che gli permetta di reagire nel momento che si verifica una determinata condizione azionando un comportamento alternativo a quello già in uso. 
-Per queste motivazioni si introduce il concetto di piano definito come sequenza di comandi temporizzati. Durante la sua esecuzione standard, il robot è in grado di reagire a situazioni predefinite, mettendo in azione un piano alternativo.
-\\
-\newline
-\\
-\begin{tabular}{ | c | }
-	\hline
-	Base Robot \\
-	\hline
-	\hline
-	
-	\includegraphics[scale = 0.38]{img/structure_plan.jpg} \\
-	\hline
-\end{tabular}
-\\
-\newline
-\\
-In figura vengono prensentate le caratteristiche fondamentali che definiscono un piano dal punto di vista strutturale, riportando gli elementi che lo costituiscono e la relazione esistente tra queste.
-Avendo precedentemente definito il concetto di Task, questo risulta essere l'approccio ideale alla definizione di un piano, perche il piano si integra perfettamente con una descrizione.
-
+Il sistema in esame è in grado di darsi dei comandi e reagire in un certo modo nel momento in cui si verificano situazioni prestabilite. E' necessario definire un modello che definisca il comportamento standard del robot e che gli permetta di reagire nel momento che si verifica una determinata condizione azionando un comportamento alternativo a quello già in uso, in questo caso interrompedo il piano in esecuzione. Per queste motivazioni si introduce il concetto di piano definito come sequenza di comandi temporizzati.
 %===========================================================================
 \subsection{Logic architecture}
 
@@ -545,15 +495,3 @@ Altro aspetto fondamentale, almeno nell'ambito dell'IoT nel quale è inserito il 
 \bibliography{biblio}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
