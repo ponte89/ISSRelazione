@@ -220,14 +220,14 @@ Possiamo definire una serie di meta-requisiti relativamente all'area di interess
 \subsection{Use cases}
 \labelssec{UseCases}
 
-\begin{tabular}{ | c | }
-	\hline
-	Fase 1 \\
-	\hline
-	\hline
-	\includegraphics[scale = 0.5]{img/caso_uso_2.jpg}\\
-	\hline
-\end{tabular}
+%\begin{tabular}{ | c | }
+%	\hline
+%	Fase 1 \\
+%	\hline
+%	\hline
+%	\includegraphics[scale = 0.5]{img/caso_uso_2.jpg}\\
+%	\hline
+%\end{tabular}
 
 \subsection{Scenarios}
 \labelssec{Scenarios}
@@ -272,26 +272,25 @@ Un BaseRobot è un componente POJO (Plain Old Java Object) ovvero un componente J
 	\hline
 \end{tabular}
 
-\subsubsection{Sensori}
-Il BaseRobot è equipaggiato on-board con una serie di sensori sempre del tipo POJO. Dal punto di vista del dominio, un sensore è un componente osservabile in grado di  raccogliere e gestire dei dati, di un tipo specifico, provenienti o da un trasduttore fisicamente esistente o da un componente che simula la generazione di quel tipo di dati. Oltre alla modalità appena descritta è possibile interrogare un sensore anche in modalità polling, ovvero a richiesta. I sensori presenti sono caratterizzati da una tipologia specifica che ne definisce l'uso e le funzionalità in relazione a tutti gli altri.
-\\
-\newline
-\\
-\begin{tabular}{ | c | }
-	\hline
-	Sensor Models \\
-	\hline
-	\hline
-	
-	\includegraphics[scale = 0.4]{img/sensor_models.jpg} \\
-	\hline
-\end{tabular}
-
 \subsubsection{Mossa/Comando}
 Un comando risulta essere un'istruzione di base per il robot che gli permette di effettuare qualcosa che ha un impatto sul mondo fisico nel quale il robot è situato.
 Le interfacce fornite prevedono la definizione di comandi a differenti livelli di specializzazione.
 
 \subsection{Test plan}
+
+\subsubsection{TestPlan Base Robot}
+
+I test possono essere trovati nel package \textit{it.unibo.test.baseRobot} ne viene riportato un estratto
+
+\begin{tabular}{ | c | }
+	\hline
+	Test Base Robot \\
+	\hline
+	\hline
+	
+	\includegraphics[scale = 0.4]{img/testRobot.png} \\
+	\hline
+\end{tabular}
 
 %===========================================================================
 \section{Problem analysis}
@@ -466,7 +465,7 @@ Nella figura successiva viene visualizzata la struttura layer identificata a par
 	\hline
 	Comportamento \\
 	\hline	
-	\includegraphics[scale = 0.6]{img/layer.jpg}\\
+	\includegraphics[scale = 0.6]{img/testRobot.png}\\
 	\hline
 \end{tabular}
 \\

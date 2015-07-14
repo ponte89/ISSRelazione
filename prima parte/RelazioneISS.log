@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  10 JUL 2015 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 10:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,16 +307,7 @@ Overfull \hbox (8.23828pt too wide) in paragraph at lines 205--207
 -dizioni dell'ambiente. 
  []
 
-[3] <img/caso_uso_2.jpg, id=20, 550.30594pt x 389.20406pt>
-File: img/caso_uso_2.jpg Graphic file (type jpg)
-
-<use img/caso_uso_2.jpg>
-Package pdftex.def Info: img/caso_uso_2.jpg used on input line 228.
-(pdftex.def)             Requested size: 275.1523pt x 194.60155pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./img/caso_uso_2.jpg>] <img/robot_models.jpg, id=24, 682.55pt x 533.995pt>
+[3] [4] <img/robot_models.jpg, id=23, 682.55pt x 533.995pt>
 File: img/robot_models.jpg Graphic file (type jpg)
 
 <use img/robot_models.jpg>
@@ -328,254 +319,233 @@ Overfull \hbox (11.95062pt too wide) in paragraph at lines 265--274
  []
 
 
-Underfull \vbox (badness 3668) has occurred while \output is active []
-
- [5]
-<img/sensor_models.jpg, id=28, 871.255pt x 917.4275pt>
-File: img/sensor_models.jpg Graphic file (type jpg)
-
-<use img/sensor_models.jpg>
-Package pdftex.def Info: img/sensor_models.jpg used on input line 286.
-(pdftex.def)             Requested size: 348.49583pt x 366.96451pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 276--289
-
+Overfull \hbox (27.95013pt too wide) in paragraph at lines 283--284
+ \T1/cmr/bx/n/10 Test-Plan Base Robot[] \T1/cmr/m/n/10 I test pos-sono es-sere 
+trovati nel pack-age \T1/cmr/m/it/10 it.unibo.test.baseRobot
  []
 
+<img/testRobot.png, id=24, 569.12625pt x 640.3925pt>
+File: img/testRobot.png Graphic file (type png)
+ <use img/testRobot.png>
+Package pdftex.def Info: img/testRobot.png used on input line 291.
+(pdftex.def)             Requested size: 227.64647pt x 256.15245pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--289
+[5 <./img/robot_models.jpg>]
+Underfull \vbox (badness 7888) has occurred while \output is active []
 
- []
-
-
-Overfull \hbox (4.17229pt too wide) in paragraph at lines 276--289
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./img/robot_models.jpg>] [7 <./img/sensor_models.jpg>]
-Overfull \hbox (1.23999pt too wide) in paragraph at lines 313--314
+ [6 <./img/testRobot.png>]
+Overfull \hbox (1.23999pt too wide) in paragraph at lines 312--313
 \T1/cmr/m/n/10 sid-era l'utilizzo di un buffer, senza al-cuna lim-i-tazione sul
 la di-men-sione, questo
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 324--346
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--346
+Underfull \hbox (badness 10000) in paragraph at lines 323--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--346
+Underfull \hbox (badness 10000) in paragraph at lines 323--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--346
+Underfull \hbox (badness 10000) in paragraph at lines 323--345
 
  []
 
-[9] <img/structure_plan.jpg, id=42, 923.45pt x 759.83875pt>
+[7] [8] <img/structure_plan.jpg, id=42, 923.45pt x 759.83875pt>
 File: img/structure_plan.jpg Graphic file (type jpg)
 
 <use img/structure_plan.jpg>
-Package pdftex.def Info: img/structure_plan.jpg used on input line 366.
+Package pdftex.def Info: img/structure_plan.jpg used on input line 365.
 (pdftex.def)             Requested size: 350.91464pt x 288.74171pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--374
+Underfull \hbox (badness 10000) in paragraph at lines 354--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--374
+Underfull \hbox (badness 10000) in paragraph at lines 354--373
 
  []
 
 
-Overfull \hbox (6.5911pt too wide) in paragraph at lines 355--374
+Overfull \hbox (6.5911pt too wide) in paragraph at lines 354--373
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--374
+Underfull \hbox (badness 10000) in paragraph at lines 354--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--374
+Underfull \hbox (badness 10000) in paragraph at lines 354--373
 
+ []
+
+[9 <./img/structure_plan.jpg>]
+<img/struct_arch_logic.jpg, id=46, 575.14874pt x 667.49374pt>
+File: img/struct_arch_logic.jpg Graphic file (type jpg)
+
+<use img/struct_arch_logic.jpg>
+Package pdftex.def Info: img/struct_arch_logic.jpg used on input line 396.
+(pdftex.def)             Requested size: 230.05542pt x 266.99277pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--405
+
+ []
+
+
+Overfull \hbox (2.65216pt too wide) in paragraph at lines 387--405
+\T1/cmr/m/n/10 così il robot ed iden-ti-f-i-cando il con-testo di es-e-cuzione 
+del pi-ano stesso. Un'ulteriore
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-<img/struct_arch_logic.jpg, id=47, 575.14874pt x 667.49374pt>
-File: img/struct_arch_logic.jpg Graphic file (type jpg)
-
-<use img/struct_arch_logic.jpg>
-Package pdftex.def Info: img/struct_arch_logic.jpg used on input line 397.
-(pdftex.def)             Requested size: 230.05542pt x 266.99277pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--406
-
- []
-
-
-Overfull \hbox (2.65216pt too wide) in paragraph at lines 388--406
-\T1/cmr/m/n/10 così il robot ed iden-ti-f-i-cando il con-testo di es-e-cuzione 
-del pi-ano stesso. Un'ulteriore
- []
-
-[11 <./img/structure_plan.jpg>] [12 <./img/struct_arch_logic.jpg>]
-<img/interaction_arch_logic.jpg, id=54, 851.18pt x 578.16pt>
+<img/interaction_arch_logic.jpg, id=50, 851.18pt x 578.16pt>
 File: img/interaction_arch_logic.jpg Graphic file (type jpg)
 
 <use img/interaction_arch_logic.jpg>
-Package pdftex.def Info: img/interaction_arch_logic.jpg used on input line 432.
+Package pdftex.def Info: img/interaction_arch_logic.jpg used on input line 431.
 
 (pdftex.def)             Requested size: 340.46596pt x 231.2599pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--435
+Underfull \hbox (badness 10000) in paragraph at lines 407--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--435
+Underfull \hbox (badness 10000) in paragraph at lines 407--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--435
+Underfull \hbox (badness 10000) in paragraph at lines 407--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--435
+Underfull \hbox (badness 10000) in paragraph at lines 407--434
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-<img/comp_arch_logic.jpg, id=59, 511.9125pt x 407.5225pt>
+[11 <./img/struct_arch_logic.jpg>]
+<img/comp_arch_logic.jpg, id=54, 511.9125pt x 407.5225pt>
 File: img/comp_arch_logic.jpg Graphic file (type jpg)
 
 <use img/comp_arch_logic.jpg>
-Package pdftex.def Info: img/comp_arch_logic.jpg used on input line 445.
+Package pdftex.def Info: img/comp_arch_logic.jpg used on input line 444.
 (pdftex.def)             Requested size: 307.14987pt x 244.51538pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--453
+Underfull \hbox (badness 10000) in paragraph at lines 436--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--453
+Underfull \hbox (badness 10000) in paragraph at lines 436--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--453
+Underfull \hbox (badness 10000) in paragraph at lines 436--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--453
+Underfull \hbox (badness 10000) in paragraph at lines 436--452
+
+ []
+
+[12 <./img/interaction_arch_logic.jpg>] [13 <./img/comp_arch_logic.jpg>]
+File: img/testRobot.png Graphic file (type png)
+
+<use img/testRobot.png>
+Package pdftex.def Info: img/testRobot.png used on input line 468.
+(pdftex.def)             Requested size: 341.47838pt x 384.23846pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--474
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <./img/interaction_arch_logic.jpg>] [15 <./img/comp_arch_logic.jpg>]
-<img/layer.jpg, id=66, 712.6625pt x 537.00626pt>
-File: img/layer.jpg Graphic file (type jpg)
- <use img/layer.jpg>
-Package pdftex.def Info: img/layer.jpg used on input line 469.
-(pdftex.def)             Requested size: 427.6008pt x 322.20624pt.
-
-Overfull \hbox (86.16774pt too wide) in paragraph at lines 469--470
-[][]| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--475
-
- []
-
-[16 <./img/layer.jpg>] [17] [18] <img/ale.jpg, id=76, 171.4405pt x 200.75pt>
+ [14]
+[15] [16] <img/ale.jpg, id=71, 171.4405pt x 200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
-
-<use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 543.
+ <use img/ale.jpg>
+Package pdftex.def Info: img/ale.jpg used on input line 542.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
- <img/bea.jpg, id=77, 168.63pt x 196.48407pt>
+
+<img/bea.jpg, id=72, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
-
-<use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 543.
+ <use img/bea.jpg>
+Package pdftex.def Info: img/bea.jpg used on input line 542.
 (pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
- <img/io.jpg, id=78, 177.66376pt x 188.705pt>
-File: img/io.jpg Graphic file (type jpg)
 
-<use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 543.
+<img/io.jpg, id=73, 177.66376pt x 188.705pt>
+File: img/io.jpg Graphic file (type jpg)
+ <use img/io.jpg>
+Package pdftex.def Info: img/io.jpg used on input line 542.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[19 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
+[17 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2772 strings out of 493117
- 37093 string characters out of 6135434
- 109399 words of memory out of 5000000
- 6187 multiletter control sequences out of 15000+600000
- 12697 words of font info for 30 fonts, out of 8000000 for 9000
+ 2765 strings out of 493117
+ 36914 string characters out of 6135434
+ 112399 words of memory out of 5000000
+ 6180 multiletter control sequences out of 15000+600000
+ 13383 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,23p,1023b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -587,11 +557,12 @@ ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (19 pages, 1018986 bytes).
+live/2014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on RelazioneISS.pdf (17 pages, 808761 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
