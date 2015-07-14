@@ -331,7 +331,7 @@ Da quanto detto, si identifica il sistema robot che esegue una serie di azioni a
 \\
 \newline
 \\
-\begin{tabular}{ | p{12.0cm} | }
+\begin{tabular}{ | c | }
 	\hline
 	Struttura \\
 	\hline	
@@ -349,7 +349,7 @@ Il RobotSystem in questa prima fase interagisce con il mondo solo tramite l'esec
 \\
 \newline
 \\
-\begin{tabular}{ | p{12.0cm} | }
+\begin{tabular}{ | c | }
 	\hline
 	Interazione \\
 	\hline	
@@ -362,7 +362,7 @@ Il comportamento del robot in questa prima fase può essere spiegato tramite l'us
 \\
 \newline
 \\
-\begin{tabular}{ |p{12.0cm}| }
+\begin{tabular}{ |c| }
 	\hline
 	Comportamento \\
 	\hline	
@@ -374,8 +374,14 @@ Il comportamento del robot in questa prima fase può essere spiegato tramite l'us
 Avendo a che fare con un argomento caratterizzato da una impronta tecnologica molto spinta che porta ad avere concetti innovativi, ci si rende conto che le astrazioni di base proposte con la programmazione object oriented fino ad ora utilizzata, non sono più in grado di soddisfare le problematiche fino a qui identificate. I concetti fino ad ora identificati portano un abstraction gap consistente in riferimento alla nostra ipotesi di base. Per riuscire a superare il divario di astrazione in modo "modulare" si fa riferimento ad una serie di frameworks (personalizzati) come \textbf{QActors} e \textbf{QStream} (per quando riguarda la gestione di messaggi), \textbf{QEvents} (per la gestione dell'event driven programming). 
 Per sfruttare appieno l'uso dei framework proposti, si usa il DSL aziendale che permette di esprimere in maniera formale e intuibile da tutti il funzionamento del sistema e di ottenere in maniera automatica il codice eseguibile relativo.
 L'uso del DSL aziendale non viene scelto solo per la semplicità d'uso ma per la caratteristica di permettere la generazione di codice del tutto automatica e quindi l'abbattimento dei costi di produzione del software.
-
-Nella figura successiva viene visualizzata la struttura layer identificata a partire dall'object oriented programming, deciso come base di partenza, a cui si appoggiano i layer precedentemente identificati, i quali potranno essere tutti sfruttati dall'ultimo ovvero highRobot.spec per colmare l'abstraction gap identificato.
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline	
+	\includegraphics[scale = 0.4]{img/abstraction.png}\\
+	\hline
+\end{tabular}
 
 \subsection{Risk analysis}
 I rischi legati al progetto sono da imputare alla scelta fatta di utilizzare il DSL aziendale come fonte per colmare l'abstraction gap precedentemente identificato, infatti questa scelta definisce una serie di vantaggi e svantaggi.
