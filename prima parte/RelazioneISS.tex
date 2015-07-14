@@ -244,7 +244,7 @@ Possiamo definire una serie di meta-requisiti relativamente all'area di interess
 	\hline
 	Scenario Principale: & Vengono eseguiti i comandi del piano per portarlo in A2, nel frattempo potrei anche attraversare l'area sensibile e quindi individuarne l'ingresso e l'uscita. \\
 	\hline
-	Scenario Secondario: & Se venisse percepito un comando di halt da console remota, il sistema e quindi il robot si ferma.\\
+	Scenario Secondario: & Non presente.\\
 	\hline
 	Postcondizione: & Il robot è in A2. \\
 	\hline
@@ -395,18 +395,18 @@ Si vuole inoltre svolgere un'analisi relativamente ai problemi identificati per 
 \section{Project}
 \labelsec{Project}
 
-Il progetto risulta essere così suddiviso in package:
-
+Il progetto risulta essere suddiviso in package:
 \begin{itemize}
 	\item \textbf{it.unibo.quactor.robot.primafase}: contiene le classi di gestione del robot
 	\item \textbf{it.unibo.robot.utils}: contiene classi utili al funzionamento del RobotActor
 \end{itemize}
 
 %===========================================================================
+Le tre dimensioni di analisi della fase progettuale, non sono state riportate ulteriormente in questa parte della relazione in quanto la loro definizione è già avvenuta in fase di analisi del problema e data la problematica da risolvere i diagrammi precedentemente presentati esplicano il comportamento del sistema in maniera completa.
 
-\subsection{Structure}
-\subsection{Interaction}
-\subsection{Behavior}
+%\subsection{Structure}
+%\subsection{Interaction}
+%\subsection{Behavior}
 
 %===========================================================================
 \section{Implementation}
@@ -425,7 +425,7 @@ La fase di implementazione risulta essere agevolata dall'uso della sovra struttu
 \section{Testing}
 \labelsec{testing}
 
-La fase di testing è stata eseguita prima in modalità \textbf{mock} ovvero virtale poi senza ulteriore sforzo ma semplicemente avendo definito la configurazione del robot si è potuto testarea anche l'effettivo funzionamento del robot reale.
+La fase di testing è stata eseguita prima in modalità \textbf{mock}, ovvero simulata, poi tramite la definizione di una specifica configurazione del robot in nostro possesso si è potuto testare anche l'effettivo funzionamento del robot reale.
 
 %===========================================================================
 

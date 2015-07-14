@@ -159,10 +159,13 @@ Le linee guida alle quali si decide di ispirarsi sono quelle dettate dalla metod
 \section{Requirements}
 \labelsec{Requirements}
 
-\subsection{Fase 1}
+\subsection{Fase 2}
 Progettare un sistema software che:
 \begin{itemize}
-	\item Permetta ad un Differential Drive Robot, \textbf{DDR} di muoversi in maniera autonoma, da un punto prefissato A1, ad un punto prefissato A2, considerando un insieme di assunzioni sull'ambiente di azione del robot (nessun dislivello, nessun ostacolo).
+	\item Permetta di specificare un?azione temporizzata: ovvero esplicitando direttamente la durata dell?azione all?interno comando impartito al Differential Drive Robot (DDR).
+	\item Permetta di definire azioni interrompibili: ovvero il robot è in grado di interrrompere l?esecuzione di un comando in seguito alla ricezione un segnale di halt proveniente da una console remota.
+	\item Permette di controllare un DDR attraverso una console remota: ovvero inviare comandi al robot il quale deve essere in grado di interpretarli ed agire di conseguenza.
+	
 \end{itemize}
 
 %===========================================================================
@@ -172,83 +175,59 @@ Progettare un sistema software che:
 \section{Requirement analysis}
 \labelsec{ReqAnalysis}
 
-Come specificato da requisiti, si identifica in maniera chiara l'ambito in cui si può insediare il sistema ovvero la gestione di robot. Da conoscenze precedentemente acquisite\footnote{Corso: Sistemi Intelligenti Robotici}, si cerca di seguito di specificare le caratteristiche fondamentali dell'ambito in questione.
-\newline
-Un robot è un sistema autonomo che esiste nel mondo fisico, e per questo soggetto alle leggi fisiche più comuni (gravità, perturbazioni magnetiche, ecc..). Esso è in grado, se opportunamente equipaggiato di percepire l'ambiente e reagire portando a termire dei compiti.
-Le parti che costituiscono un robot sono:
+Avendo definto i requisiti nella prima relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, si specificano in manierea più approfondita delle aree che non erano state identificate:
 \begin{itemize}
-	\item \textbf{Corpo fisico}: così da poter operare e sorreggersi;
-	\item \textbf{Sensori}: componente Hardware e Software in grado di rendere il robot abile a percepire un determinato stimolo presente nell'ambiente;
-	\item \textbf{Effettori}: componente fisico che realizza l'attuatore;
-	\item \textbf{Attuatore}: dispositivo Hardware che realizza un qualche compito;
-	\item \textbf{Controller}: parte Software del robot che gli permette di essere autonomo.
+	\item Definizione di piano di azioni;
+	\item Definizione di azione temporizzata;
+	\item Definizione di azione interrompibile;
+	\item Definizione di console remota.
 \end{itemize}
 
-Il comportamento del robot non è semplicemente identificato dallo specifico controller programmato, ma è una interazione completa tra le parti che costituiscono il robot stesso.
+\subsection{Piano di azioni}
+Un piano a questo livello può essere indetificato da un nome e composto da una serie di azioni che dovranno essere performate dal robot.
 
-Vengono riportate ora una serie di caratteristiche identificative dei robot. Un robot può essere definito inoltre come agente autonomo intellligente quando possiede le caratteristiche di sopravvivre in un ambiente complesso. Nel caso in cui non sia necessario l'intervento umano, l'agente è definito completo.
+\subsection{Azione temporizzata}
+ Comando impartito al robot che prevede nella sua definizione oltre al tipo di azione anche la sua effettiva durata.
 
-\begin{itemize}
-\item \textbf{SELF SUFFICENCY}\\
-Abilità di sussistenza del robot verso se stesso, in un periodo di tempo prolungato
+\subsection{Azione interrompibile}
+Azione che prevede una esecuzione con tipologia asincrona ovvero all'interno del proprio piano, una azione asincrona prevede la possibilità di essere interrotta alla ricezione di una nuova azione o di un comando halt proveniente dalla console.
 
-\item \textbf{AUTONOMIA}\\
-Libertà da controlli esterni, l'autosufficenza incrementa il livello di autonomia. Le modalità per cui un agente può controllarne un altro dipende dal livello di conoscenza dello stato, dei meccanismi interni dell'agente che deve essere controllato.
-Si ha maggiore autonomia se si è in grado di apprendere.
+\subsection{Console remota}
+La console remota riveste il ruolo di emittente di determinati segnali in grado di essere captati e interpretati dal robot specifico.
 
-\item \textbf{SITUADNESS}\\
-Un agente è situato se acquisice informazioni riguardo l'ambiente in cui vive solo grazie all'utilizzo di sensori che interagiscono con lo stesso. Un agente situato interagisce con il mondo senza l'intervento umano.
-
-\item \textbf{EMBODIEMENT}\\
-Gli agenti vivono in un ambiente fisico e non si può prescindere da quello, questo ha influenza anche sulle caratteristiche che deve avere il robot e i compiti che è in grado di eseguire. Si vuole il più possibile sfruttare la relazione che esiste tra caratteristiche dell'ambiete e quelle del robot stesso.
-
-\item \textbf{ADATTATIVITA'}\\
-Abilità di "adattarsi" di un robot alle caratteristiche dell'ambiente. L'agente presenta la stessa struttura a fronte di cambiamenti di condizioni dell'ambiente.
-\end{itemize}
-
-Dopo questa breve descrizione di alcune caratteristiche che identificano i robot, ci si concentra sui requisiti definiti dall'utente.
-
-Si identifica la presenza di un sistema Hardware e Software eterogeneo distribuito, il robot e inoltre un "emettitore di segnali", la \textbf{console remota}, che quest'ultimo possa essere in grado di percepire agendo quindi di conseguenza. Da queste specifiche si evince facilmente che l'area di interesse del sistema in questione è quella dei robot.
-
-Possiamo definire una serie di meta-requisiti relativamente all'area di interesse:
-\begin{itemize}
-	\item Possiamo dire che un Differential Drive Robot è una entità in grado di eseguire una serie di comandi di movimento, il comando può essere richiamato da un elemento esterno al robot chiamato Mind.
-	\item Il componente Mind può essere messo in esecuzione sullo stesso supporto computazionale del robot o su di uno a parte. Nel primo caso diremo che il robot è controllato in maniera \textbf{Embedded-mode}, mentre nel secondo caso diremo che il robot è controllato in \textbf{Avatar-mode}.
-	\item Una sequenza di comandi di movimento emesse dalla Mind è chiamata Piano.
-\end{itemize}
 %===========================================================================
 \subsection{Use cases}
 \labelssec{UseCases}
 
-\begin{tabular}{ | c | }
-	\hline
-	Fase 1 \\
-	\hline
-	\hline
-	\includegraphics[scale = 0.5]{img/caso_uso_2.jpg}\\
-	\hline
-\end{tabular}
+%\begin{tabular}{ | c | }
+%	\hline
+%	Fase 1 \\
+%	\hline
+%	\hline
+%	\includegraphics[scale = 0.5]{img/caso_uso_2.jpg}\\
+%	\hline
+%\end{tabular}
 
 \subsection{Scenarios}
 \labelssec{Scenarios}
 
-\begin{tabular}{|p{4.0cm}|p{8.0cm}|}
-	\hline
-	ID: & Movimento autonomo.\\
-	\hline
-	Descrizione: & Il robot si muove da un punto A1 ad un punto A2 in maniera autonoma \\ 
-	\hline
-	Attore: & Robot \\
-	\hline
-	Precondizione: & Il robot deve essere acceso e deve arrivare in A1. \\
-	\hline
-	Scenario Principale: & Vengono eseguiti i comandi del piano per portarlo in A2, nel frattempo potrei anche attraversare l'area sensibile e quindi individuarne l'ingresso e l'uscita. \\
-	\hline
-	Scenario Secondario: & Se venisse percepito un comando di halt da console remota, il sistema e quindi il robot si ferma.\\
-	\hline
-	Postcondizione: & Il robot è in A2. \\
-	\hline
-\end{tabular}
+%\begin{tabular}{|p{4.0cm}|p{8.0cm}|}
+%	\hline
+%	ID: & Movimento autonomo.\\
+%	\hline
+%	Descrizione: & Il robot si muove da un punto A1 ad un punto A2 in maniera autonoma \\ 
+%	\hline
+%	Attore: & Robot \\
+%	\hline
+%	Precondizione: & Il robot deve essere acceso e deve arrivare in A1. \\
+%	\hline
+%	Scenario Principale: & Vengono eseguiti i comandi del piano per portarlo in A2, nel frattempo potrei anche attraversare l'area sensibile e quindi individuarne l'ingresso e l'uscita. \\
+%	\hline
+%	Scenario Secondario: & Se venisse percepito un comando di halt da console remota, il sistema e quindi il robot si ferma.\\
+%	\hline
+%	Postcondizione: & Il robot è in A2. \\
+%	\hline
+%\end{tabular}
 
 \subsection{(Domain)model}
 In questa sezione viene analizzato il dominio fornito dall'attuale know-how aziendale. Esso viene descritto tramite una analisi incentrata sulle tre dimensioni fondamentali, caratteristiche di analisi del software\footnote{Corso: Ingegneria del Software }, ovvero: struttura, interazione e comportamento.
