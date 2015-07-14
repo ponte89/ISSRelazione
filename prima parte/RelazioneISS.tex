@@ -358,7 +358,7 @@ Il RobotSystem in questa prima fase interagisce con il mondo solo tramite l'esec
 \end{tabular}
 
 \subsubsection{Comportamento}
-Il comportamento del robot in questa prima fase può essere spiegato tramite l'uso di un'automa a stati finito.
+Il comportamento del robot in questa prima fase può essere spiegato tramite l'uso di un'automa a stati finiti.
 \\
 \newline
 \\
@@ -371,7 +371,7 @@ Il comportamento del robot in questa prima fase può essere spiegato tramite l'us
 \end{tabular}
 
 \subsection{Abstraction gap}
-Avendo a che fare con un argomento caratterizzato da una impronta tecnologica molto spinta che porta ad avere In questa fase ci si rende conto che l'ipotesi tecnologica di partenza, ovvero Java e la programmazione object oriented, è in grado di soddisfare le problematiche fino a qui identificate. Per un'implementazione più robusta, a partire dall'object oriented programming, viene introdotto il layer QActor. QActor è un framework che implementa un sistema software in grado di supportare il message-passing. Un QActor, infatti, è un entità attiva che esegue codice Java estendendolo con operazioni base per l'invio e la ricezione di messaggi. Per la risoluzione del problema si utilizza la classe RobotActor che usufruisce del framework QActor e permette di interagire con il BaseRobot senza la necessità di utilizzare, in questa fase, lo scambio di messaggi.
+In questa fase ci si rende conto che l'ipotesi tecnologica di partenza, ovvero Java e la programmazione object oriented, è in grado di soddisfare le problematiche fino a qui identificate. Per un'implementazione più robusta, a partire dall'object oriented programming, viene introdotto il layer QActor. QActor è un framework che implementa un sistema software in grado di supportare il message-passing. Un QActor, infatti, è un entità attiva che esegue codice Java estendendolo con operazioni base per l'invio e la ricezione di messaggi. Per la risoluzione del problema si utilizza la classe RobotActor che usufruisce del framework QActor e permette di interagire con il BaseRobot senza la necessità di utilizzare, in questa fase, lo scambio di messaggi.
 \\
 \newline
 \\
@@ -413,10 +413,6 @@ Il progetto risulta essere così suddiviso in package:
 \labelsec{Implementation}
 
 La fase di implementazione risulta essere agevolata dall'uso della sovra struttura realizzata dalla classe RobotActot utilizzata. Infatti per questa prima fase è bastato richiedere l'istanza di BaseRobot relativa e farle eseguire i comandi specificati.
-
-\\
-\newline
-\\
 \begin{tabular}{ |c| }
 	\hline	
 	\includegraphics[scale = 0.4]{img/impl.png}\\
@@ -428,12 +424,15 @@ La fase di implementazione risulta essere agevolata dall'uso della sovra struttu
 %===========================================================================
 \section{Testing}
 \labelsec{testing}
+
+La fase di testing è stata eseguita prima in modalità \textbf{mock} ovvero virtale poi senza ulteriore sforzo ma semplicemente avendo definito la configurazione del robot si è potuto testarea anche l'effettivo funzionamento del robot reale.
+
 %===========================================================================
 
 %===========================================================================
 \section{Deployment}
 \labelsec{Deployment}
-Il nostro Differential Drive Robot viene realizzato attraverso un RaspberryPi su cui e? mandata in esecuzione l?intera infrastruttura multilayer. La connessione al sistema distribuito avviene tramite rete WiFi(natspot), ma e? anche possibile una connessione attraverso porta ethernet, avente un indirizzo ip statico (192.168.137.2). Si riporta di seguito il file di configurazione relativo al robot usato in fase di testing
+Il nostro Differential Drive Robot viene realizzato attraverso un RaspberryPi su cui è mandata in esecuzione l?intera infrastruttura multilayer. La connessione al sistema distribuito avviene tramite rete WiFi(natspot), ma è anche possibile una connessione attraverso porta ethernet, avente un indirizzo ip statico (192.168.137.2). Si riporta di seguito il file di configurazione relativo al robot usato in fase di testing
 
 \begin{tabular}{ |c| }
 	\hline	
@@ -446,6 +445,11 @@ Il nostro Differential Drive Robot viene realizzato attraverso un RaspberryPi su
 %===========================================================================
 \section{Maintenance}
 \labelsec{Maintenance}
+
+Eventuale manutenzione evolutiva del sistema viene semplificata dalla possibilità di estendere il RobotBase con l'utilizzo di nuovi layer per lo svolgimento di operazioni specifiche. Cambiare e mantenere applicazioni cotruite con lo stesso approccio seguito per questo progetto (Model Driven Development) risulta essere più semplice in quanto si sfruttano modelli e un linguaggio di alto livello.
+Uno dei problemi dello sviluppo del software degli ultimi anni e? che i requisiti del business tendono a cambiare piu? velocemente dei sistemi software che li implementano. Utilizzando un approccio MDD si può pero risolvere questa problematica infatti se c?e? un collegamento esplicito fra i requisiti del business e il modello del dominio dell?applicazione, e? anche possibile propagare parte dei cambiamenti automaticamente.
+Sono ferquenti inoltre i cambiamenti dovuti alle differenti tecnologie utilizzate, anche in questo caso MDD permette di non dover cambiare il modello dell?applicazione quando si vuole cambiare la tecnologia di implementazione avendolo utilizzato come punto fermo della realizzazione progettuale.
+
 %===========================================================================
 \newpage
 

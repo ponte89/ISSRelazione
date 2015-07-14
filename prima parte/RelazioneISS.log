@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -441,78 +441,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--383
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10 <./img/InterRobot.png> <./img/CompArc.png>] [11 <./img/abstraction.png>]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.418 \newline
-              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.418 \newline
-              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 \begin
-            {tabular}{ |c| }
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 <img/impl.png, id=61, 772.8875pt x 488.82625pt>
 File: img/impl.png Graphic file (type png)
  <use img/impl.png>
-Package pdftex.def Info: img/impl.png used on input line 422.
+Package pdftex.def Info: img/impl.png used on input line 418.
 (pdftex.def)             Requested size: 309.14952pt x 195.52702pt.
  [12 <./img/impl.png>] <img/configurazione.png, id=66, 406.51875pt x 560.0925pt
 >
 File: img/configurazione.png Graphic file (type png)
 
 <use img/configurazione.png>
-Package pdftex.def Info: img/configurazione.png used on input line 440.
+Package pdftex.def Info: img/configurazione.png used on input line 439.
 (pdftex.def)             Requested size: 243.91312pt x 336.05809pt.
- [13 <./img/configurazione.png>]
-<img/ale.jpg, id=72, 171.4405pt x 200.75pt>
+
+Underfull \vbox (badness 1205) has occurred while \output is active []
+
+ [13 <./img/configurazione.png>] [14] <img/ale.jpg, id=75, 171.4405pt x 200.75p
+t>
 File: img/ale.jpg Graphic file (type jpg)
- <use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 466.
+
+<use img/ale.jpg>
+Package pdftex.def Info: img/ale.jpg used on input line 470.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
-
-<img/bea.jpg, id=73, 168.63pt x 196.48407pt>
+ <img/bea.jpg, id=76, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
- <use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 466.
-(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
 
-<img/io.jpg, id=74, 177.66376pt x 188.705pt>
+<use img/bea.jpg>
+Package pdftex.def Info: img/bea.jpg used on input line 470.
+(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
+ <img/io.jpg, id=77, 177.66376pt x 188.705pt>
 File: img/io.jpg Graphic file (type jpg)
- <use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 466.
+
+<use img/io.jpg>
+Package pdftex.def Info: img/io.jpg used on input line 470.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[14 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
+[15 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -535,10 +500,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/
 texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (14 pages, 959650 bytes).
+Output written on RelazioneISS.pdf (15 pages, 960914 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
