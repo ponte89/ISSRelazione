@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,33 +361,35 @@ Overfull \hbox (17.81773pt too wide) in paragraph at lines 299--309
 Underfull \vbox (badness 1769) has occurred while \output is active []
 
  [8]
-<img/InterRobot.png, id=44, 198.5016pt x 444.2196pt>
+<img/ArcLogicStruc.png, id=44, 552.1428pt x 429.7656pt>
+File: img/ArcLogicStruc.png Graphic file (type png)
+
+<use img/ArcLogicStruc.png>
+Package pdftex.def Info: img/ArcLogicStruc.png used on input line 338.
+(pdftex.def)             Requested size: 220.85321pt x 171.90318pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--345
+
+ []
+
+<img/InterRobot.png, id=45, 198.5016pt x 444.2196pt>
 File: img/InterRobot.png Graphic file (type png)
  <use img/InterRobot.png>
-Package pdftex.def Info: img/InterRobot.png used on input line 338.
-(pdftex.def)             Requested size: 79.39923pt x 177.6847pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--345
-
- []
-
-File: img/InterRobot.png Graphic file (type png)
-<use img/InterRobot.png>
 Package pdftex.def Info: img/InterRobot.png used on input line 356.
 (pdftex.def)             Requested size: 79.39923pt x 177.6847pt.
 
@@ -403,91 +405,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--359
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./img/InterRobot.png>] <img/CompArc.png, id=49, 395.076pt x 391.2216pt>
+ [9 <./img/ArcLogicStruc.png>] <img/CompArc.png, id=50, 395.076pt x 391.2216pt>
 File: img/CompArc.png Graphic file (type png)
 
 <use img/CompArc.png>
 Package pdftex.def Info: img/CompArc.png used on input line 369.
 (pdftex.def)             Requested size: 237.04742pt x 234.73477pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--377
+Underfull \hbox (badness 10000) in paragraph at lines 361--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--377
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--377
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--377
-
- []
-
-[10 <./img/CompArc.png>]
-File: img/testRobot.png Graphic file (type png)
- <use img/testRobot.png>
-Package pdftex.def Info: img/testRobot.png used on input line 393.
-(pdftex.def)             Requested size: 341.47838pt x 384.23846pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--399
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--399
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--399
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--399
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--399
+Underfull \hbox (badness 10000) in paragraph at lines 361--372
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-[12] [13] [14] <img/ale.jpg, id=67, 171.4405pt x 200.75pt>
+ [10 <./img/InterRobot.png> <./img/CompArc.png>] [11]
+Underfull \vbox (badness 1292) has occurred while \output is active []
+
+ [12]
+[13] <img/ale.jpg, id=66, 171.4405pt x 200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
  <use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 467.
+Package pdftex.def Info: img/ale.jpg used on input line 450.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
 
-<img/bea.jpg, id=68, 168.63pt x 196.48407pt>
+<img/bea.jpg, id=67, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
  <use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 467.
+Package pdftex.def Info: img/bea.jpg used on input line 450.
 (pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
 
-<img/io.jpg, id=69, 177.66376pt x 188.705pt>
+<img/io.jpg, id=68, 177.66376pt x 188.705pt>
 File: img/io.jpg Graphic file (type jpg)
  <use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 467.
+Package pdftex.def Info: img/io.jpg used on input line 450.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[15 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
+[14 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
 Here is how much of TeX's memory you used:
- 2765 strings out of 493117
- 36749 string characters out of 6135434
+ 2770 strings out of 493117
+ 36869 string characters out of 6135434
  109399 words of memory out of 5000000
- 6180 multiletter control sequences out of 15000+600000
+ 6184 multiletter control sequences out of 15000+600000
  13383 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,23p,1023b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -502,10 +467,10 @@ ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (15 pages, 609667 bytes).
+Output written on RelazioneISS.pdf (14 pages, 639821 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

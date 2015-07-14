@@ -335,7 +335,7 @@ Da quanto detto, si identifica il sistema robot che esegue una serie di azioni a
 	\hline
 	Struttura \\
 	\hline	
-	\includegraphics[scale = 0.4]{img/InterRobot.png}\\
+	\includegraphics[scale = 0.4]{img/ArcLogicStruc.png}\\
 	\hline
 \end{tabular}
 \\
@@ -369,11 +369,6 @@ Il comportamento del robot in questa prima fase può essere spiegato tramite l'us
 	\includegraphics[scale = 0.6]{img/CompArc.png}\\
 	\hline
 \end{tabular}
-\\
-\newline
-\\
-Per descrivere al meglio il comportamento del sistema abbiamo deciso di utilizzare un DSL (domain specific language), utile per descrivere la configurazione del robot e adatto alla prototipazione rapida. 
-Il DSL è solo un punto di partenza, è abbastanza facile per la modifica della sintassi mentre la semantica del linguaggio è espressa dal codice generato, quest'ultimo rappresenta un modo per superare l'abstraction gap tra il problema e la tecnologia di riferimento.
 
 % ----codice dsl---
 
@@ -383,19 +378,7 @@ Per sfruttare appieno l'uso dei framework proposti, si usa il DSL aziendale che 
 L'uso del DSL aziendale non viene scelto solo per la semplicità d'uso ma per la caratteristica di permettere la generazione di codice del tutto automatica e quindi l'abbattimento dei costi di produzione del software.
 
 Nella figura successiva viene visualizzata la struttura layer identificata a partire dall'object oriented programming, deciso come base di partenza, a cui si appoggiano i layer precedentemente identificati, i quali potranno essere tutti sfruttati dall'ultimo ovvero highRobot.spec per colmare l'abstraction gap identificato.
-\\
-\newline
-\\
-\begin{tabular}{ |p{12.0cm}| }
-	\hline
-	Comportamento \\
-	\hline	
-	\includegraphics[scale = 0.6]{img/testRobot.png}\\
-	\hline
-\end{tabular}
-\\
-\newline
-\\
+
 \subsection{Risk analysis}
 I rischi legati al progetto sono da imputare alla scelta fatta di utilizzare il DSL aziendale come fonte per colmare l'abstraction gap precedentemente identificato, infatti questa scelta definisce una serie di vantaggi e svantaggi.
 
