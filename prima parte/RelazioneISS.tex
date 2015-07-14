@@ -313,47 +313,21 @@ L'ultimo tassello sarà la progettazione del sistema, prima di fare ciò però, occ
 Dopo aver fatto chiarezza sull'ambito di interesse del problema in questione avendo descritto il modello del dominio nel quale ci caliamo, si individuano le problematiche che ci si pongono davanti per portare a termine il progetto. Si cerca inoltre di ricondursi a problematiche ricorrenti fornendo concetti utili per affrontare le successive fasi previste di progettazione e realizzazione del prodotto finale.
 
 \subsection{Problematiche identificate}
-Ciò di cui disponiamo a questo livello è solo un componente POJO che realizza le caratteristiche associate ad un BaseRobot (precedentemente descritto nella sezione di analisi del dominio), da quanto studiato in Sistemi Intelligenti Robotici, e ripreso in maniera veloce nella fase di introduzione ai requisiti, il robot per funzionare ha bisogno di un componente apposito che ci permetta di controllarlo a livello applicativo. Si vuole, rimanendo fedeli a tale definizione, disaccoppiare il controllo dall'effettivo esecutore. Questo perchè risulta una scelta vincente dal punto di vista ingegneristico della separazione dei concetti. Per questo, come già accennato, si attua un modello in cui il robot viene comandato da un componente esterno che risulta essere la mind ovvero la mente di elaborazione.
+Ciò di cui disponiamo a questo livello è solo un componente POJO che realizza le caratteristiche associate ad un BaseRobot (precedentemente descritto nella sezione di analisi del dominio), da quanto studiato in Sistemi Intelligenti Robotici, e ripreso in maniera veloce nella fase di introduzione ai requisiti, il robot per funzionare ha bisogno di un componente apposito che ci permetta di controllarlo a livello applicativo. Si vuole, rimanendo fedeli a tale definizione, disaccoppiare il controllo dall'effettivo esecutore. Questo perchè risulta una scelta vincente dal punto di vista ingegneristico della separazione dei concetti. Il robot è quindi in grado di eseguire una serie di comandi, inviati da un elemento esterno chiamato Mind. La Mind può essere eseguita sullo stesso supporto di esecuzione del robot o in modo separato. In questo caso si è ritenuto opportuno utilizzare lo stesso supporto, controllando quindi il robot in embedded-mode.
+Il robot deve avere la capacità di riconoscere una serie di comandi che gli permettano di muoversi e che saranno eseguiti dagli attuatori. E' necessario poter specificare il tipo di comando, ovvero la direzione verso la quale il robot deve muoversi e la potenza da assegnare a ciascun motore.
+Inoltre è essenziale poter intervallare i comandi eseguiti dal robot, in modo da definire la fine di un comando e l'inizio del successivo.
 
 \subsubsection{CONCLUSIONI PARZIALI}
 Si è ora in grado di poter descrivere un sistema robotico in maniera abbastanza completa relativamente anche alle caratteristiche complesse dell'agente. La successiva caratteristica che emerge dai requisiti è quella di autonomia relativamente alle richieste dell'utente.
 Come descritto precedentemente, si parla di autonomia di un robot quando non è prevista l'interazione con l'utente durante l'esecuzione di un compito assegnato, quindi in grado di auto-governarsi seguendo leggi e strategie predeterminate.
 
-Il sistema in esame è in grado di darsi dei comandi e reagire in un certo modo nel momento in cui si verificano situazioni prestabilite. E' necessario definire un modello che definisca il comportamento standard del robot e che gli permetta di reagire nel momento che si verifica una determinata condizione azionando un comportamento alternativo a quello già in uso. 
-Per queste motivazioni si introduce il concetto di piano definito come sequenza di comandi temporizzati. Durante la sua esecuzione standard, il robot è in grado di reagire a situazioni predefinite, mettendo in azione un piano alternativo.
-\\
-\newline
-\\
-\begin{tabular}{ | c | }
-	\hline
-	Base Robot \\
-	\hline
-	\hline
-	
-	\includegraphics[scale = 0.38]{img/structure_plan.jpg} \\
-	\hline
-\end{tabular}
-\\
-\newline
-\\
-In figura vengono prensentate le caratteristiche fondamentali che definiscono un piano dal punto di vista strutturale, riportando gli elementi che lo costituiscono e la relazione esistente tra queste.
-Avendo precedentemente definito il concetto di Task, questo risulta essere l'approccio ideale alla definizione di un piano, perche il piano si integra perfettamente con una descrizione.
-
-%===========================================================================
+%============================================================================
 \subsection{Logic architecture}
 
 Ci poniamo nell'ottica di ottenere un modello del sistema funzionante e globalmente accettato da tutte le parti in gioco, identificando i macro sottosistemi senza specificare nulla più di quanto già detto precedentemente. Il tutto rimanendo indipendenti dalla specifica tecnologia che si utilizzerà e demandando queste decisioni solo durante la fase di progetto.
 
 \subsubsection{Struttura}
-Da quanto detto, si identificano principalmente tre sottosistemi:
-\begin{itemize}
-	\item altri eventuali sistemi in grado di ricevere segnali presenti nell'ambiente (world);
-	\item console remota;
-	\item robot system.
-\end{itemize}
-
-Mentre con il primo si identifica l'\textbf{ecosistema} in cui opera il robot ed altri eventuali sistemi esterni presenti, la console remota riveste il ruolo di emittente di determinati segnali in grado di essere captati dal robot system specifico o da una serie di robot interessati ad una specifica tipologia. Quest'ultimo risulta essere strutturato su una serie di livelli che vanno ad arricchire le caratteristiche del robot stesso, raggiungendo così un livello di astrazione più consono al progetto richiesto.
-Il primo layer, consente la gestione della comunicazione a scambio di messaggi, mentre si è deciso di sfruttare un ulteriore layer che permetta di realizzare un'infrastruttura ad eventi avendo identificato, in fase di analisi, alcune caratteristiche coerenti per gestire al meglio le informazioni provenienti dai sensori.
+Da quanto detto, si identifica il sistema robot che esegue una serie di azioni all'interno del mondo. Questo identifica l'\textbf{ecosistema} in cui opera il robot e possono essere situati altri eventuali sistemi esterni presenti.
 \\
 \newline
 \\
@@ -361,34 +335,17 @@ Il primo layer, consente la gestione della comunicazione a scambio di messaggi, 
 	\hline
 	Struttura \\
 	\hline	
-	\includegraphics[scale = 0.4]{img/struct_arch_logic.jpg}\\
+	\includegraphics[scale = 0.4]{img/InterRobot.png}\\
 	\hline
 \end{tabular}
 \\
 \newline
 \\
-All'interno del diagramma si è voluto anche rappresentare il \textbf{"mondo"}, situando così il robot ed identificando il contesto di esecuzione del piano stesso.
-Un'ulteriore sottosistema identificato, come già detto, è la \textbf{console remota} che, ai fini dettati dal testing del sistema, verrà posta all'interno del sistema RemoteConsole e sarà quindi in grado di inviare il messaggio di "halt".
-Si lascia inoltre spazio, in questa rappresentazione, ad ulteriori sistemi presenti nel "mondo" ed in grado di interagire con i principali sistemi proposti nell'architettura logica, in modo da focalizzarsi solo sulla definizione dei vincoli di interazione e senza complicare ulteriormente la struttura e il comportamento del sistema nel suo complesso.
+All'interno del diagramma si è voluto anche rappresentare il \textbf{"mondo"}, situando così il robot ed identificando il contesto di esecuzione.
+
 
 \subsubsection{Interazione}
-Il RobotSystem può interagire sia con sistemi esterni, che possono essere rappresentati da altri robot, oppure con il sottosistema RemoteConsole, entrambe le interazione sono analizzate nel dettaglio di seguito.
-Il RobotSystem interagisce con i sistemi esterni inviando i segnali \textbf{<RobotName> Enter} e \textbf{<RobotName> Exit} che identificano rispettivamente l'entrata e l'uscita del robot dalla "SensibleArea". Questo segnale è rappresentato da un evento che può essere percepito da tutti i sistemi esterni interessati che si registrano alla sorgente di informazione, in questo caso il robot. La semantica dell'interazione è rappresentata dalla dispatch che prevede l'invio di un messaggio senza che il sistema resti in attesa di una risposta, la comunicazione è quindi di tipo asincrono. 
-Il RobotSystem è inoltre in grado di ricevere un segnale di tipo "halt" inviato da una RemoteConsole. In questo caso il segnale è indirizzato e percepito da uno specifico robot e può essere gestito tramite l'invio di un messaggio con la seguente struttura:\\
-\newline
-\\
-\begin{tabular}{|p{12.0cm}|}
-\hline
-msg( MSGID, MSGTYPE, SENDER, RECEIVER, CONTENT, SEQNUM )\\
-\\
-MSGID: è il nome che identifica il messaggio\\
-MSGTYPE: identifica il tipo di messaggio utilizzato (dispatch)\\
-SENDER: rappresenta colui che invia il messaggio\\
-RECEIVER: identifica colui che deve ricevere il messaggio\\
-CONTENT: contenuto del messaggio (halt)\\
-SEQNUM: rappresenta un numero che viene incrementato ad ogni invio di un messaggio.\\
-\hline
-\end{tabular}
+Il RobotSystem in questa prima fase interagisce con il mondo solo tramite l'esecuzione di una azione tramite l'uso degli appositi attuatori. Non sono quindi previste altre tipologie di comunicazioni.
 \\
 \newline
 \\
@@ -396,12 +353,12 @@ SEQNUM: rappresenta un numero che viene incrementato ad ogni invio di un messagg
 	\hline
 	Interazione \\
 	\hline	
-	\includegraphics[scale = 0.4]{img/interaction_arch_logic.jpg}\\
+	\includegraphics[scale = 0.4]{img/InterRobot.png}\\
 	\hline
 \end{tabular}
 
 \subsubsection{Comportamento}
-Una volta partito, il robot system mette in esecuzione il piano e genera l'evento di ricezione della linea, recepita utilizzando un sensore di linea, che segnala l'ingresso o l'uscita dall'area sensibile in base al fatto che la linea sia percepita una prima o seconda volta. In tutti gli stati posso giungere allo stato finale di stop sia ricevendo un "halt", inviato dalla console remota, sia un "end plan" che dichiara la fine dell'esecuzione del piano richiesto.
+Il comportamento del robot in questa prima fase può essere spiegato tramite l'uso di un'automa a stati finito.
 \\
 \newline
 \\
@@ -409,7 +366,7 @@ Una volta partito, il robot system mette in esecuzione il piano e genera l'event
 	\hline
 	Comportamento \\
 	\hline	
-	\includegraphics[scale = 0.6]{img/comp_arch_logic.jpg}\\
+	\includegraphics[scale = 0.6]{img/CompArc.png}\\
 	\hline
 \end{tabular}
 \\
