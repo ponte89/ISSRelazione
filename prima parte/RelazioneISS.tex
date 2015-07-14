@@ -220,14 +220,14 @@ Possiamo definire una serie di meta-requisiti relativamente all'area di interess
 \subsection{Use cases}
 \labelssec{UseCases}
 
-%\begin{tabular}{ | c | }
-%	\hline
-%	Fase 1 \\
-%	\hline
-%	\hline
-%	\includegraphics[scale = 0.5]{img/caso_uso_2.jpg}\\
-%	\hline
-%\end{tabular}
+\begin{tabular}{ | c | }
+	\hline
+	Fase 1 \\
+	\hline
+	\hline
+	\includegraphics[scale = 0.5]{img/casoUso.jpg}\\
+	\hline
+\end{tabular}
 
 \subsection{Scenarios}
 \labelssec{Scenarios}
@@ -316,49 +316,6 @@ Dopo aver fatto chiarezza sull'ambito di interesse del problema in questione ave
 Ciò di cui disponiamo a questo livello è solo un componente POJO che realizza le caratteristiche associate ad un BaseRobot (precedentemente descritto nella sezione di analisi del dominio), da quanto studiato in Sistemi Intelligenti Robotici, e ripreso in maniera veloce nella fase di introduzione ai requisiti, il robot per funzionare ha bisogno di un componente apposito che ci permetta di controllarlo a livello applicativo. Si vuole, rimanendo fedeli a tale definizione, disaccoppiare il controllo dall'effettivo esecutore. Questo perchè risulta una scelta vincente dal punto di vista ingegneristico della separazione dei concetti. Per questo, come già accennato, si attua un modello in cui il robot viene comandato da un componente esterno che risulta essere la mind ovvero la mente di elaborazione.
 
 Dalla definizione dei requisiti si identifica inoltre come il sistema debba essere veicolato verso un'interazione distribuita sulla rete, dato che deve poter reagire al comando di halt proveniente appunto da remoto. L'astrazione di partenza, non è in grado di esprimere questa caratteristica (comunicazione tramite rete) ed è per questo che occorre aggiungere una serie di livelli applicativi che potranno andare a colmare le mancanze identificate.
-
-\subsubsection{Gestione dei messaggi}
-Ricopre un ruolo fondamentale la gestione dei messaggi i quali, come già detto possono essere interni al robot per l'esecuzione di una determinata operazione, oppure esterni e quindi dettati da una console remota.
-Si riprendono di seguito dei concetti relativi alla gestione di messaggi appresi in corsi precedenti\footnote{Corso: Ingegneria del Software}:
-
-\begin{itemize}
-	\item INTERAZIONE ASINCRONA: In questa tipologie di comunicazione si considera l'utilizzo di un buffer, senza alcuna limitazione sulla dimensione, questo fa si che l'emittente non debba attendere nessuna informazione di ritorno anche quando manda informazioni ad uno specifico destinatario. Il ricevente attende solo quando il buffer risulta essere vuoto. E' per questo che la comunicazione assume anche il nome di Bufferizzata;
-	\item INTERAZIONE SINCRONA: In questa tipologia di comunicazione non si fa uso di alcun buffer. L'emittente e il desinatario scambiano informazione unificando concettualmente le proprie attività.
-\end{itemize}
-Visto il contesto nel quale ci poniamo, si considerano le comunicazioni essere asincrone.\\
-Un'ulteriore suddivisione che si può attuare sulle specifiche dei messaggi è:
-\begin{itemize}
-	\item REQUEST-RESPONSE: Si considera l'invio di un messaggio da un emittente verso un destinatario senza ottenere un messaggio di risposta di alcun tipo. Si ipotizza infatti che il messaggio arrivi ma non vengono effettuate assunzioni a riguardo.
-	\item DISPATCH: Forma di comunicazione in cui il mittente invia un messaggio e si aspetta un messaggio di risposta conforme a quanto richiesto, con l'assunzione della effettivo soddisfacimento della richiesta.
-\end{itemize}
-
-\subsubsection{Gestione Sensori}
-Da quanto appreso nel modello del dominio, i sensori collegati al robot si comportano secondo il pattern Observer, questa caratteristica non risulta essere la più consona in quanto l'utilizzo di questo pattern porta con se features non consone all'obiettivo nostro.\\
-Nel nostro caso vi è una stretta relazione tra sorgente del segnale e observer, questa caratteristica mina la reattivita della sorgente. Quindi essendo il robot costituito da una serie di sensori, la gestione di numerosi observer può rallentare la generazione dei dati, anche in questo caso la colpa è da imputare al passaggio di flusso di controllo tra sorgente e observer.
-Dopo questa breve analisi si nota subito che una soluzione che sfrutta questa tecnologia non risulta consona al contesto verso cui si sta dirigendo il sistema, proprio per questo si vuole disaccoppiare il flusso di controllo.\\
-Un altro possibile approccio è quello appreso durante quest'ultimo anno\footnote{Corso: Programmazione Avanzata e Paradigmi} che getta le basi per una gestione event-driven, la quale permette di disaccoppiare sorgente e gestione dell'evento stesso. In questo caso il comportamento è organizzato in un insieme di handler che si occupano di gestire gli eventi, incapsulando la computazione da eseguire alla percezione di un determinato evento. L'esecuzione della computazione asincrona è atomica, gli eventi che si verificano durante tale esecuzione, sono inseriti in una coda di eventi, che viene utilizzata per tenere traccia degli eventi generati dall'ambiente e dagli handler stessi. 
-Il comportamento del sistema è rappresentato da un modello di esecuzione chiamato event-loop così definito:
-\\
-\newline
-\\
-\begin{tabular}{|p{8.0cm}|}
-\hline
-loop$\{$\\
-	Event ev = evQueue.remove()\\
-	Handler handler = selectHandler(ev)\\
-	execute(handler)\\
-$\}$
-\\
-\hline
-\end{tabular}
-\\
-\newline
-\\
-L'event-loop è definito internamente all'infrastruttura in modo da non essere visibile agli sviluppatori che si occuperanno unicamente di specificare la selezione e l'esecuzione degli handler. Nonostante i vantaggi di questo approccio, sono emerse anche alcune problematiche alle quali ci si riferisce con il termine \textbf{callback hell}, tra queste si individua un'alta frammentazione del codice in handler asincroni e l'innestarsi di callback che incrementano la complessità del codice, a sfavore di leggibilità, riusabilità ed estensione. Questo rende decisamente difficile la programmazione e le richieste relative alla verifica dello stato del mondo.
-
-
-Un approccio alternativo può essere definito con l'introduzione di un componente: il Task, che rappresenta un'entità autonoma che lavora in modo proattivo, tale comportamento è
-\textbf{event-based} e più precisamente un task potrebbe anche non terminare la proprio esecuzione. Il comportamento di un task è modellato come un automa a stati finiti che gestisce gli eventi in accordo con il suo stato interno. 
 
 \subsubsection{CONCLUSIONI PARZIALI}
 Si è ora in grado di poter descrivere un sistema robotico in maniera abbastanza completa relativamente anche alle caratteristiche complesse dell'agente. La successiva caratteristica che emerge dai requisiti è quella di autonomia relativamente alle richieste dell'utente.
