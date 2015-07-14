@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  14 JUL 2015 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -425,66 +425,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--372
 File: img/abstraction.png Graphic file (type png)
 
 <use img/abstraction.png>
-Package pdftex.def Info: img/abstraction.png used on input line 382.
+Package pdftex.def Info: img/abstraction.png used on input line 380.
 (pdftex.def)             Requested size: 177.6847pt x 244.36462pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--385
+Underfull \hbox (badness 10000) in paragraph at lines 374--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--385
+Underfull \hbox (badness 10000) in paragraph at lines 374--383
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./img/InterRobot.png> <./img/CompArc.png>] [11 <./img/abstraction.png>] [
-12]
-[13] <img/ale.jpg, id=68, 171.4405pt x 200.75pt>
+ [10 <./img/InterRobot.png> <./img/CompArc.png>] [11 <./img/abstraction.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.418 \newline
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.418 \newline
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 \begin
+            {tabular}{ |c| }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<img/impl.png, id=61, 772.8875pt x 488.82625pt>
+File: img/impl.png Graphic file (type png)
+ <use img/impl.png>
+Package pdftex.def Info: img/impl.png used on input line 422.
+(pdftex.def)             Requested size: 309.14952pt x 195.52702pt.
+ [12 <./img/impl.png>] <img/configurazione.png, id=66, 406.51875pt x 560.0925pt
+>
+File: img/configurazione.png Graphic file (type png)
+
+<use img/configurazione.png>
+Package pdftex.def Info: img/configurazione.png used on input line 440.
+(pdftex.def)             Requested size: 243.91312pt x 336.05809pt.
+ [13 <./img/configurazione.png>]
+<img/ale.jpg, id=72, 171.4405pt x 200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
  <use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 454.
+Package pdftex.def Info: img/ale.jpg used on input line 466.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
 
-<img/bea.jpg, id=69, 168.63pt x 196.48407pt>
+<img/bea.jpg, id=73, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
  <use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 454.
+Package pdftex.def Info: img/bea.jpg used on input line 466.
 (pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
 
-<img/io.jpg, id=70, 177.66376pt x 188.705pt>
+<img/io.jpg, id=74, 177.66376pt x 188.705pt>
 File: img/io.jpg Graphic file (type jpg)
  <use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 454.
+Package pdftex.def Info: img/io.jpg used on input line 466.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[14 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
+[14 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2775 strings out of 493117
- 36979 string characters out of 6135434
+ 2785 strings out of 493117
+ 37179 string characters out of 6135434
  109399 words of memory out of 5000000
- 6188 multiletter control sequences out of 15000+600000
+ 6196 multiletter control sequences out of 15000+600000
  13383 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,23p,1023b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr
-/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (14 pages, 692599 bytes).
+ 37i,11n,23p,979b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on RelazioneISS.pdf (14 pages, 959650 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

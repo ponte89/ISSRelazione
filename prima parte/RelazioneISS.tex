@@ -371,9 +371,7 @@ Il comportamento del robot in questa prima fase può essere spiegato tramite l'us
 \end{tabular}
 
 \subsection{Abstraction gap}
-Avendo a che fare con un argomento caratterizzato da una impronta tecnologica molto spinta che porta ad avere concetti innovativi, ci si rende conto che le astrazioni di base proposte con la programmazione object oriented fino ad ora utilizzata, non sono più in grado di soddisfare le problematiche fino a qui identificate. I concetti fino ad ora identificati portano un abstraction gap consistente in riferimento alla nostra ipotesi di base. Per riuscire a superare il divario di astrazione in modo "modulare" si fa riferimento ad una serie di frameworks (personalizzati) come \textbf{QActors} e \textbf{QStream} (per quando riguarda la gestione di messaggi), \textbf{QEvents} (per la gestione dell'event driven programming). 
-Per sfruttare appieno l'uso dei framework proposti, si usa il DSL aziendale che permette di esprimere in maniera formale e intuibile da tutti il funzionamento del sistema e di ottenere in maniera automatica il codice eseguibile relativo.
-L'uso del DSL aziendale non viene scelto solo per la semplicità d'uso ma per la caratteristica di permettere la generazione di codice del tutto automatica e quindi l'abbattimento dei costi di produzione del software.
+Avendo a che fare con un argomento caratterizzato da una impronta tecnologica molto spinta che porta ad avere In questa fase ci si rende conto che l'ipotesi tecnologica di partenza, ovvero Java e la programmazione object oriented, è in grado di soddisfare le problematiche fino a qui identificate. Per un'implementazione più robusta, a partire dall'object oriented programming, viene introdotto il layer QActor. QActor è un framework che implementa un sistema software in grado di supportare il message-passing. Un QActor, infatti, è un entità attiva che esegue codice Java estendendolo con operazioni base per l'invio e la ricezione di messaggi. Per la risoluzione del problema si utilizza la classe RobotActor che usufruisce del framework QActor e permette di interagire con il BaseRobot senza la necessità di utilizzare, in questa fase, lo scambio di messaggi.
 \\
 \newline
 \\
@@ -384,32 +382,26 @@ L'uso del DSL aziendale non viene scelto solo per la semplicità d'uso ma per la 
 \end{tabular}
 
 \subsection{Risk analysis}
-I rischi legati al progetto sono da imputare alla scelta fatta di utilizzare il DSL aziendale come fonte per colmare l'abstraction gap precedentemente identificato, infatti questa scelta definisce una serie di vantaggi e svantaggi.
-
-\subsubsection{SVANTAGGI}
-
-\begin{itemize}
-	\item Per poter comprendere appieno la semantica del linguaggio occorre investire una certa quantità di tempo nell'analisi del codice generato. Questo è dovuto al fatto che non risulta essere ancora presente un modello opportuno dei comandi, e delle operazioni computabili attraverso il DSL. Manca inoltre ancora una documentazione precisa per poter permettere anche ad utenti meno esperti di formarsi in relazione all'utilizzo del DSL. Per questo motivo parte del tempo speso anche dal team è stato per cercare di comprendere le scelte che hanno portato il system designer a risolvere un determinato problema in un modo piuttosto che in un altro. L'unico modo per poter capire questo è stata un'attenta analisi del codice generato. Per questo, vi è ancora un certo grado di ambiguità per alcuni dei concetti inseriti all'interno del DSL, portando l'utente che lo sfrutta a lavorare con uno strumento di modellazione che esprime concetti non completamente chiari e condivisibili da tutti;
-	\item Un altro elemento negativo identificato, proviene parzialmente dalle caratteristiche espresse nella parte precedente ed è inoltre legato alla struttura intrinseca del DSL stesso, ovvero la sua struttura layered. Infatti come detto prima, per poter essere padroni nell'utilizzo del linguaggio occorre una lunga fase di testing sperimentale che porta ad avere una curva di apprendimento più lunga non avendo una documentazione sulla quale appoggiarsi, nè in fase di utilizzo per la generazione di codice nè nella successiva fase di debug. Inoltre se si identifica un problema all'interno di uno dei layer che costituiscono il DSL, difficilmente qualcuno di diverso da chi ha scritto il codice riuscirà a risolvere la problematica identificata.
-	\item La struttura del DSL così costituita, porta a fare si che nel momento in cui si voglia introdurre un upgrade della stessa per modificare un comportamento, o di una modifica della semantica, presente all'interno di uno dei layer definiti, le ripercussioni che si avranno saranno visibili solo in fase di messa in esecuzione del sistema e non in fase di definizione della nuova feature. La modifica inserita inoltre, data la mancanza di un modello formale, rischia inoltre di riperquotersi in maniera impredicibile su ciò che è già stato creato in precedenza.
-\end{itemize}
-
-Dalle problematiche identificate si nota come risulti fondamentale definire almeno un modello che chiunque possa sfruttare per capire i concetti esprimibili con il DSL e gli permetta, anche senza una conoscenza approfondita delle caratteristiche di ogni layer costituente, di sfruttare appieno le caratteristiche investendo così più tempo nella risoluzione avendo mitigato in parte la curva di apprendimento di uso del software avendo a disposizione un aiuto in più.
-Inoltre risulterebbe utile definire una serie di invarianti di sistema, magari concordando pareri di un system designer (chi cioè crea ed estende il DSL) con un project designer (chi sfrutta il DSL) per definire una serie di concetti che anche in un nuovo update di versione non debbano mutare.
-
-\subsubsection{VANTAGGI}
-Si vogliono comunque specificare i numerosi aspetti positivi identificati nell'uso del DSL, infatti anche se sono stati precedentemente presentati gli svantaggi, una volta pesati questi con i punti di forza sulle quali si basa il DSL si capisce il perchè comunque è stato scelto questo approccio. Infatti considerando di avere a disposizione un modello chiaro e condiviso a livello aziendale, il vantaggio che si ottiene dal punto di vista temporale durante la fase di generazione del codice risulta essere sostanziale e permette inoltre la produzione di artefatti già dalle fase di analisi i quali svolgono il duplice scopo di modello di sistema utile alla comprensione dello stesso e parte fondante per la generazione di codice.
-Altro aspetto fondamentale, almeno nell'ambito dell'IoT nel quale è inserito il nostro progetto è la forte riusabilità del codice garantita dall'uso del DSL, questo requisito, anche se identificato come non funzionale, risulta essere importante anche ai fini del corso e difficilmente con altre modalità operative risulta essere ottenibile. 
+Non sono stati identificati rischi significativi in questa prima fase di gestione del sistema.
 
 %===========================================================================
 \section{Work plan}
 \labelsec{wplan}
-	
+Il Piano di lavoro prevede una prima fase di analisi dei requisiti esposti per fornire una solida base alle successive fasi; si vuole ottenere un modello del dominio non ambiguo e condiviso con il committente, e quindi considerante i requisiti nella loro globabilita.
+Si vuole inoltre svolgere un'analisi relativamente ai problemi identificati per produrre una architetture logica solida che permetta di testare un primo prototipo, inizialmente virtuale, che soddisfi i requisiti. Non appena il prototipo sarà realizzato basterà creare una configurazione appropriata del robot a disposizione del gruppo e si potrà testare anche con prove reali se quanto portato in simulazione funzioni. Si usa un approccio di lavoro incrementale al problma così da permettere una rapida reindirizzazione nel caso scelte fatte portino ad errori progettuali.
 %===========================================================================
 
 %===========================================================================
 \section{Project}
 \labelsec{Project}
+
+Il progetto risulta essere così suddiviso in package:
+
+\begin{itemize}
+	\item \textbf{it.unibo.quactor.robot.primafase}: contiene le classi di gestione del robot
+	\item \textbf{it.unibo.robot.utils}: contiene classi utili al funzionamento del RobotActor
+\end{itemize}
+
 %===========================================================================
 
 \subsection{Structure}
@@ -419,6 +411,18 @@ Altro aspetto fondamentale, almeno nell'ambito dell'IoT nel quale è inserito il 
 %===========================================================================
 \section{Implementation}
 \labelsec{Implementation}
+
+La fase di implementazione risulta essere agevolata dall'uso della sovra struttura realizzata dalla classe RobotActot utilizzata. Infatti per questa prima fase è bastato richiedere l'istanza di BaseRobot relativa e farle eseguire i comandi specificati.
+
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline	
+	\includegraphics[scale = 0.4]{img/impl.png}\\
+	\hline
+\end{tabular}
+
 %===========================================================================
 
 %===========================================================================
@@ -429,6 +433,14 @@ Altro aspetto fondamentale, almeno nell'ambito dell'IoT nel quale è inserito il 
 %===========================================================================
 \section{Deployment}
 \labelsec{Deployment}
+Il nostro Differential Drive Robot viene realizzato attraverso un RaspberryPi su cui e? mandata in esecuzione l?intera infrastruttura multilayer. La connessione al sistema distribuito avviene tramite rete WiFi(natspot), ma e? anche possibile una connessione attraverso porta ethernet, avente un indirizzo ip statico (192.168.137.2). Si riporta di seguito il file di configurazione relativo al robot usato in fase di testing
+
+\begin{tabular}{ |c| }
+	\hline	
+	\includegraphics[scale = 0.6]{img/configurazione.png}\\
+	\hline
+\end{tabular}
+
 %===========================================================================
 
 %===========================================================================
