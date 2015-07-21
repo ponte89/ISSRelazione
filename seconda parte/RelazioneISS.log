@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  20 JUL 2015 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  21 JUL 2015 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,7 +347,7 @@ Overfull \hbox (0.67902pt too wide) in paragraph at lines 289--290
 File: img/struttura.jpg Graphic file (type jpg)
  <use img/struttura.jpg>
 Package pdftex.def Info: img/struttura.jpg used on input line 316.
-(pdftex.def)             Requested size: 148.39175pt x 119.48427pt.
+(pdftex.def)             Requested size: 222.5933pt x 179.23097pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 308--325
 
@@ -379,14 +379,29 @@ File: img/Interazione.jpg Graphic file (type jpg)
 
 <use img/Interazione.jpg>
 Package pdftex.def Info: img/Interazione.jpg used on input line 335.
-(pdftex.def)             Requested size: 161.78557pt x 147.33182pt.
+(pdftex.def)             Requested size: 202.23505pt x 184.16759pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--338
+Underfull \hbox (badness 10000) in paragraph at lines 327--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--338
+Underfull \hbox (badness 10000) in paragraph at lines 327--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--341
 
  []
 
@@ -397,63 +412,101 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: img/Epsilon.jpg Graphic file (type jpg)
 
 <use img/Epsilon.jpg>
-Package pdftex.def Info: img/Epsilon.jpg used on input line 349.
-(pdftex.def)             Requested size: 208.28374pt x 197.29861pt.
+Package pdftex.def Info: img/Epsilon.jpg used on input line 352.
+(pdftex.def)             Requested size: 277.70988pt x 263.06316pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 340--356
+Underfull \hbox (badness 10000) in paragraph at lines 343--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--356
+Underfull \hbox (badness 10000) in paragraph at lines 343--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--356
+Underfull \hbox (badness 10000) in paragraph at lines 343--359
 
  []
 
 
-Overfull \hbox (17.81512pt too wide) in paragraph at lines 340--356
+Underfull \hbox (badness 10000) in paragraph at lines 343--359
+
+ []
+
+
+Overfull \hbox (17.81512pt too wide) in paragraph at lines 343--359
 \T1/cmr/m/n/10 Per model-lare il "com-por-ta-mento di de-fault" del robot, quin
 di l'esecuzione dell'azione
  []
 
-[8 <./img/Interazione.jpg> <./img/Epsilon.jpg>] [9]
-<img/ale.jpg, id=44, 171.4405pt x 200.75pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./img/Interazione.jpg>] <img/Abstract.png, id=41, 444.2196pt x 789.1884pt>
+File: img/Abstract.png Graphic file (type png)
+
+<use img/Abstract.png>
+Package pdftex.def Info: img/Abstract.png used on input line 370.
+(pdftex.def)             Requested size: 266.53381pt x 473.5167pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--379
+
+ []
+
+[9 <./img/Epsilon.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./img/Abstract.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13] <img/ale.jpg, id=60, 171.4405pt x 200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
  <use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 450.
+Package pdftex.def Info: img/ale.jpg used on input line 433.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
 
-<img/bea.jpg, id=45, 168.63pt x 196.48407pt>
+<img/bea.jpg, id=61, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
  <use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 450.
+Package pdftex.def Info: img/bea.jpg used on input line 433.
 (pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
 
-<img/io.jpg, id=46, 177.66376pt x 188.705pt>
+<img/io.jpg, id=62, 177.66376pt x 188.705pt>
 File: img/io.jpg Graphic file (type jpg)
  <use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 450.
+Package pdftex.def Info: img/io.jpg used on input line 433.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[10 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
+[14 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
 Here is how much of TeX's memory you used:
- 2754 strings out of 493117
- 36524 string characters out of 6135434
- 110393 words of memory out of 5000000
- 6172 multiletter control sequences out of 15000+600000
+ 2761 strings out of 493117
+ 36637 string characters out of 6135434
+ 110410 words of memory out of 5000000
+ 6177 multiletter control sequences out of 15000+600000
  13473 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,23p,1009b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,23p,873b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr
 /local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/l
 ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/loc
@@ -465,10 +518,10 @@ ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (10 pages, 1191778 bytes).
+Output written on RelazioneISS.pdf (14 pages, 1267594 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
