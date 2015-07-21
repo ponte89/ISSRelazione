@@ -5,7 +5,8 @@
 \usepackage[latin1]{inputenc}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-
+\usepackage{listings}
+\lstloadlanguages{java}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{url}
@@ -400,11 +401,29 @@ Occorre trovare un metodo per agevolare la diffusione dei vari eventi agli agent
 %===========================================================================
 \section{Implementation}
 \labelsec{Implementation}
+
+\begin{tabular}{ |c| }
+	\hline
+	RobotActorInterruptible.java\\ 
+	\hline	
+	\includegraphics[scale = 0.6]{img/Impl1.png}\\
+	\hline
+\end{tabular}
+\begin{tabular}{ |c| }
+  \hline
+  CtxRobotInterruptible.java\\ 
+  \hline	
+  \includegraphics[scale = 0.4]{img/impl2.png}\\
+  \hline
+\end{tabular}
 %===========================================================================
 
 %===========================================================================
 \section{Testing}
 \labelsec{testing}
+
+La fase di testing delle nuove funzionalità è stata effettuata testando prima il sistema mock ovvero virtualizzato mentre una seconda fase, quella relativa al progetto, viene testata con lo stesso robot fisico (Talos) tramite il quale erano stati effettuati i test nella prima parte.
+
 %===========================================================================
 
 %===========================================================================
