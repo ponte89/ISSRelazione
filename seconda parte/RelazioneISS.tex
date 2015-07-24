@@ -386,17 +386,66 @@ Occorre trovare un metodo per agevolare la diffusione dei vari eventi agli agent
 %===========================================================================
 \section{Work plan}
 \labelsec{wplan}
-	
+
+
+
 %===========================================================================
 
 %===========================================================================
 \section{Project}
 \labelsec{Project}
+
+Il progetto risulta essere così suddiviso:
+\begin{itemize}
+	\item \textbf{it.unibo.qactor.robot.test}: all'interno si possono trovare due file java. \textbf{RobotActorInterruptible.java} il quale contine la definizione del piano di esempio, nel nostro caso i comandi eseguiti dal robot saranno: forward, left, forward; e la classe \textbf{CtxRobotInterruptible} che risulta essere l'entry point del sistema.
+\end{itemize}
+
 %===========================================================================
 
 \subsection{Structure}
+
+La struttura delle classi del progetto viene di seguito riportata.
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline
+	Structural View\\ 
+	\hline	
+	\includegraphics[scale = 0.4]{img/strutProg.png}\\
+	\hline
+\end{tabular}
+
+
 \subsection{Interaction}
-\subsection{Behavior}
+
+
+
+\subsection{Behaviour}
+
+Il comportamento del sistema viene, per rendere una più facile lettura, legato ad un esempio di implementazione il cui codice sarà presentato nella apposita sezione.
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline
+	Behaviour View\\ 
+	\hline	
+	%\includegraphics[scale = 0.6]{img/compProg.png}\\
+	\hline
+\end{tabular}
+\\
+\newline
+\\
+L'esecuzione del piano viene affidata alla funzione \textbf{executeActionAsFSM()} che crea un automa a stati finiti, come precedentemente indicato, che permette di gestire tutti gli eventuali eventi che possono arrivare durante l'esecuzione di un'azione e i possibili piani da attuare. In questo caso l'unico evento che dev'essere gestito è quello di "halt" che interrompe l'esecuzione del piano corrente e ferma il movimento del robot. E' inoltre prevista la possibilità di riprendere il piano da dove era stato interrotto, in questo caso viene fatta una distinzione tra:
+\begin{itemize}
+	\item \textbf{Azione compensabile}: definita come azione che dopo essere stata interrotta, permetta l'esecuzione di un'altra azione che la compensa o la completa;
+	\item \textbf{Azione non compensabile}: definita come un'azione che, a seguito di un'interruzione, non può essere ripristinata o completata (es. l'esecuzione di un suono).
+\end{itemize}
+Per poter eseguire azioni sincrone/asincrone che abbiano la possiblità di essere interrotte viene modellata l'entità TimedAction che ha la caratteristica di svolgere l'azione e emettere un evento al termine dell'azione stessa. L'utilizzo di un ID per ogni azione permette di specificare a quale azione si rivolge lo specifico evento di terminazione. L'evento lanciato è univocamente identificato con un ID in modo da poter essere associato ad una determinata azione, in caso contrario, avendo un evento generico e supponendo di avere una sequenza di azioni "forward", l'evento bloccherà l'azione a prescindere da quella realmente terminata.
+Tutti gli eventi generati su un nodo vengono propagati verso gli altri nodi, per questo alcuni eventi sono definiti come "locali" ovvero che non necessitano di essere propagati sulla rete (es. evento di terminazione azione).
+Nel contesto del problema le azioni eseguite dal robot sono eseguite in modalità sincrona, infatti, nel caso in cui si fosse utilizzata la modalità asincrona il robot non avrebbe il tempo di attuare l?azione in quanto sarebbe subito inviato l?evento di terminazione e si passerebbe all?azione seguente.
+
 
 %===========================================================================
 \section{Implementation}
@@ -429,11 +478,20 @@ La fase di testing delle nuove funzionalità è stata effettuata testando prima il
 %===========================================================================
 \section{Deployment}
 \labelsec{Deployment}
+
+
+
 %===========================================================================
 
 %===========================================================================
 \section{Maintenance}
 \labelsec{Maintenance}
+
+Ci si rende conto che il progetto  realizzato presenta una serie di problematiche, identificate nella fase di analisi del problema, che sono comuni a progetti inseriti nell'ambito della programmazione distribuita ed eterogenea. Si è cercato di risolvere le problematiche presentate ad un livello generale così da poter inglobare concetti anche non direttamente correlati alle richieste ma che sono comunque legate all'ambito.
+Arrivati a questo punto, si vuole consolidare in maniera sicura il know-how sviluppato riguardo al problema proposto, utilizzandolo come base salda per futuri progetti ed evitando così di porsi nuovamente problemi per situazioni già affrontate in precedenza evitando così di riscrivere parti di codice.\\
+In tutto questo, l'aiuto fornito dall'infrastruttura dei QActor e RobotActor risulta essere molto valido e si vuole, con l'esperienza maturata, spostarsi su un modello implementativo del tipo Model Driven Developer che permetta la costruzione di modelli che si basino su quanto già appreso e creato in precedenza, spingendo per una fase di modellazione che porti alla generazione di un prototipo funzionante nel minore tempo possibile avendo una base di conoscenza del problema alle spalle ampia e solida.\\
+Le modalità a questo punto sono due: la prima prevede di creare una serie di plugin, legati al linguaggio fino a qui scelto, che dovranno essere distribuiti in ogni area di sviluppo aziendale; questo non risulta essere un approccio comodo nel momento in cui occorrerà affrontare le problematiche di upgrade al codice oppure. Quella più plausibile, prevede l'utilizzo dei concetti definiti per le problematiche anticipate e spostarli all'interno di un Domain Specific Language cosi da poter produrre già a livello di analisi dei prototipi funzionanti e demandare al livello progettuale solo la definizione di caratteristiche tecniche. In questo modo inoltre si risolve la problematica legata alla scelta della tipologia di linguaggio o di paradigma utile ai fini del progetto, rompendo i vincoli utilizzando un meta-modello custom personalizzabile secondo le nuove esigenze che potranno essere incontrate.
+
 %===========================================================================
 \newpage
 
@@ -467,8 +525,6 @@ La fase di testing delle nuove funzionalità è stata effettuata testando prima il
 
  
 \appendix
-
-
 \bibliographystyle{abbrv}
 \bibliography{biblio}
 
