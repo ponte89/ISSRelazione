@@ -368,7 +368,7 @@ Il primo che occorre è la possibilità di una gestione tramite gli attori in quan
 	\hline
 	Robot Actor Model\\ 
 	\hline	
-	\includegraphics[scale = 0.6]{img/Abstract.png}\\
+	\includegraphics[scale = 0.5]{img/Abstract.png}\\
 	\hline
 \end{tabular}
 \\
@@ -387,7 +387,8 @@ Occorre trovare un metodo per agevolare la diffusione dei vari eventi agli agent
 \section{Work plan}
 \labelsec{wplan}
 
-
+A fronte di quanto richiesto nei requisiti risulta fino dall'inizio del processo la necessita? di dividere lo sviluppo del sistema in macro-iterazioni, nella precedente relazione è stata presentata la risoluzione alla problematica di esecuzione di azioni da parte di un robot, mentre in questa si presentano le azioni che hanno portato alla creazione di una infrastruttura software che permetta ad un robot l'esecuzione di un piano rimanendo comunque reattivo a stimoli esterni come allarmi o comandi inviati dall'utente.\\
+Il Piano di lavoro risulta essere sostanzialmente il medesimo di quello presentato precedentemente: infatti si prevede la fase di analisi dei requisiti che porta a produrre un modello del dominio non ambiguo e condiviso con il committente e con le parti in gioco. Successivamente si andra? a svolgere un'analisi dei problemi evidenziati, avente come obiettivo quello di produrre un'architettura logica che possa essere resiliente anche a problematiche non direttamente collegate con il problema in questione, producendo quindi una evoluzione della architettura logica precende.
 
 %===========================================================================
 
@@ -399,12 +400,17 @@ Il progetto risulta essere così suddiviso:
 \begin{itemize}
 	\item \textbf{it.unibo.qactor.robot.test}: all'interno si possono trovare due file java. \textbf{RobotActorInterruptible.java} il quale contine la definizione del piano di esempio, nel nostro caso i comandi eseguiti dal robot saranno: forward, left, forward; e la classe \textbf{CtxRobotInterruptible} che risulta essere l'entry point del sistema.
 \end{itemize}
+Per quanto rigurada il codice riportato di seguito, si riferisce al piano di esempio costituito dalle seguenti azioni:
+\\
+\begin{math}
+	\textbf{FORWARD}\rightarrow \textbf{LEFT} \rightarrow \textbf{FORWARD}
+\end{math}
 
 %===========================================================================
 
 \subsection{Structure}
 
-La struttura delle classi del progetto viene di seguito riportata.
+La struttura delle classi del progetto viene di seguito riportata. Per consentire una più facile consultazione sono stati riportati solo i metodi considerati principali. Inoltre non si espande la struttura della classe BaseRobot essendo già presente il modello all'interno della sezione dominio applicativo della relazione.
 \\
 \newline
 \\
@@ -416,13 +422,21 @@ La struttura delle classi del progetto viene di seguito riportata.
 	\hline
 \end{tabular}
 
-
 \subsection{Interaction}
 
-
+Anche per quanto riguarda l'interazione, si prende come esempio il piano precedentemente definito e si riporta lo stack di chiamate che avvengono nel normale funzionamento del sistema, riportando inoltre i possibili comandi che possono avvenire dalla console remota.
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline
+	Interaction View\\ 
+	\hline	
+	\includegraphics[scale = 0.6]{img/intProg.jpg}\\
+	\hline
+\end{tabular}
 
 \subsection{Behaviour}
-
 Il comportamento del sistema viene, per rendere una più facile lettura, legato ad un esempio di implementazione il cui codice sarà presentato nella apposita sezione.
 \\
 \newline
@@ -431,7 +445,7 @@ Il comportamento del sistema viene, per rendere una più facile lettura, legato a
 	\hline
 	Behaviour View\\ 
 	\hline	
-	%\includegraphics[scale = 0.6]{img/compProg.png}\\
+	\includegraphics[scale = 0.4]{img/compProg.png}\\
 	\hline
 \end{tabular}
 \\
@@ -444,13 +458,15 @@ L'esecuzione del piano viene affidata alla funzione \textbf{executeActionAsFSM()
 \end{itemize}
 Per poter eseguire azioni sincrone/asincrone che abbiano la possiblità di essere interrotte viene modellata l'entità TimedAction che ha la caratteristica di svolgere l'azione e emettere un evento al termine dell'azione stessa. L'utilizzo di un ID per ogni azione permette di specificare a quale azione si rivolge lo specifico evento di terminazione. L'evento lanciato è univocamente identificato con un ID in modo da poter essere associato ad una determinata azione, in caso contrario, avendo un evento generico e supponendo di avere una sequenza di azioni "forward", l'evento bloccherà l'azione a prescindere da quella realmente terminata.
 Tutti gli eventi generati su un nodo vengono propagati verso gli altri nodi, per questo alcuni eventi sono definiti come "locali" ovvero che non necessitano di essere propagati sulla rete (es. evento di terminazione azione).
-Nel contesto del problema le azioni eseguite dal robot sono eseguite in modalità sincrona, infatti, nel caso in cui si fosse utilizzata la modalità asincrona il robot non avrebbe il tempo di attuare l?azione in quanto sarebbe subito inviato l?evento di terminazione e si passerebbe all?azione seguente.
-
-
+Nel contesto del problema le azioni eseguite dal robot sono eseguite in modalità sincrona, infatti, nel caso in cui si fosse utilizzata la modalità asincrona il robot non avrebbe il tempo di attuare l'azione in quanto sarebbe subito inviato l'evento di terminazione e si passerebbe all?azione seguente.
 %===========================================================================
 \section{Implementation}
 \labelsec{Implementation}
 
+Di seguito si presenta il codice delle classi citate nella sezione di progetto.
+\\
+\newline
+\\
 \begin{tabular}{ |c| }
 	\hline
 	RobotActorInterruptible.java\\ 
@@ -458,12 +474,39 @@ Nel contesto del problema le azioni eseguite dal robot sono eseguite in modalità
 	\includegraphics[scale = 0.6]{img/Impl1.png}\\
 	\hline
 \end{tabular}
+\\
+\newline
+\\
 \begin{tabular}{ |c| }
   \hline
   CtxRobotInterruptible.java\\ 
   \hline	
   \includegraphics[scale = 0.4]{img/impl2.png}\\
   \hline
+\end{tabular}
+\\
+\newline
+\\
+Si riportano inoltre una serie di schermate dell'applicativo console il quale viene utilizzato come controllo per il robot da terminare Android.
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline
+	Android Application\\ 
+	\hline	
+	\includegraphics[scale = 0.4]{img/app1.png}\\
+	\hline
+\end{tabular}
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline
+	Android Application\\ 
+	\hline	
+	\includegraphics[scale = 0.35]{img/app2.png}\\
+	\hline
 \end{tabular}
 %===========================================================================
 
@@ -472,14 +515,13 @@ Nel contesto del problema le azioni eseguite dal robot sono eseguite in modalità
 \labelsec{testing}
 
 La fase di testing delle nuove funzionalità è stata effettuata testando prima il sistema mock ovvero virtualizzato mentre una seconda fase, quella relativa al progetto, viene testata con lo stesso robot fisico (Talos) tramite il quale erano stati effettuati i test nella prima parte.
-
 %===========================================================================
 
 %===========================================================================
 \section{Deployment}
 \labelsec{Deployment}
 
-
+Il processo produttivo affrontato ha come fase terminale la gestione del deployment applicativo. Si prevede di distribuire l'applicazione finale mediante l'utilizzo di un pacchetto jar che dovrà essere eseguito sul robot, in particolare sul RaspBerry il quale deve inoltre essere connesso tramite apposito toogle wifi alla rete denominata natspot che viene utilizzata come mezzo trasmissivo dei messaggi e degli eventi da e per il robot. Si prevede la distribuzione dell'applicazione android sottoforma di un archivio con estensione APK, essendo il formato standard per la distribuzione delle applicazioni di quel tipo.\\
 
 %===========================================================================
 
@@ -502,7 +544,7 @@ Le modalità a questo punto sono due: la prima prevede di creare una serie di plu
 
 \vskip.5cm
 %%% \begin{figure}
-\begin{tabular}{ | c | | c || c | }
+\begin{tabular}{| c || c || c |}
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   \hline
   Alessia Papini & Beatrice Mezzapesa & Lorenzo Pontellini \\

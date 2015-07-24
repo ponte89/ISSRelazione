@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  24 JUL 2015 11:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  24 JUL 2015 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,7 +477,7 @@ File: img/Abstract.png Graphic file (type png)
 
 <use img/Abstract.png>
 Package pdftex.def Info: img/Abstract.png used on input line 371.
-(pdftex.def)             Requested size: 266.53381pt x 473.5167pt.
+(pdftex.def)             Requested size: 222.10925pt x 394.59323pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 362--380
 
@@ -498,126 +498,215 @@ Underfull \hbox (badness 10000) in paragraph at lines 362--380
 
  []
 
-[9 <./img/Epsilon.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./img/Abstract.png>] <img/strutProg.png, id=53, 954.9276pt x 611.886pt>
+[9 <./img/Epsilon.jpg>] [10 <./img/Abstract.png>] [11]
+<img/strutProg.png, id=53, 954.9276pt x 611.886pt>
 File: img/strutProg.png Graphic file (type png)
-
-<use img/strutProg.png>
-Package pdftex.def Info: img/strutProg.png used on input line 415.
+ <use img/strutProg.png>
+Package pdftex.def Info: img/strutProg.png used on input line 421.
 (pdftex.def)             Requested size: 381.96426pt x 244.75006pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--418
+Underfull \hbox (badness 10000) in paragraph at lines 413--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--418
+Underfull \hbox (badness 10000) in paragraph at lines 413--424
 
  []
 
 
-Overfull \hbox (37.64072pt too wide) in paragraph at lines 407--418
-[] 
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 426--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--441
-
- []
-
-[13 <./img/strutProg.png>] <img/Impl1.png, id=62, 597.432pt x 498.663pt>
-File: img/Impl1.png Graphic file (type png)
-
-<use img/Impl1.png>
-Package pdftex.def Info: img/Impl1.png used on input line 458.
-(pdftex.def)             Requested size: 358.46196pt x 299.2001pt.
- <img/impl2.png, id=63, 1008.76875pt x 525.965pt>
-File: img/impl2.png Graphic file (type png)
-
-<use img/impl2.png>
-Package pdftex.def Info: img/impl2.png used on input line 465.
-(pdftex.def)             Requested size: 403.50035pt x 210.38226pt.
-
-Overfull \hbox (14.13841pt too wide) in paragraph at lines 454--469
-[]
- []
-
-
-Overfull \hbox (59.1768pt too wide) in paragraph at lines 454--469
+Overfull \hbox (37.64072pt too wide) in paragraph at lines 413--424
 [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-Overfull \vbox (11.37689pt too high) has occurred while \output is active []
+ [12]
+<img/intProg.jpg, id=58, 562.0197pt x 466.1415pt>
+File: img/intProg.jpg Graphic file (type jpg)
+ <use img/intProg.jpg>
+Package pdftex.def Info: img/intProg.jpg used on input line 435.
+(pdftex.def)             Requested size: 337.21442pt x 279.68704pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--438
+
+ []
 
 
-[15 <./img/Impl1.png> <./img/impl2.png>] [16]
-<img/ale.jpg, id=74, 171.4405pt x 200.75pt>
+Underfull \hbox (badness 10000) in paragraph at lines 427--438
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./img/strutProg.png>] <img/compProg.png, id=64, 647.5392pt x 765.0984pt>
+File: img/compProg.png Graphic file (type png)
+
+<use img/compProg.png>
+Package pdftex.def Info: img/compProg.png used on input line 448.
+(pdftex.def)             Requested size: 259.01108pt x 306.03394pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--455
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--455
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--455
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--455
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./img/intProg.jpg>] [15 <./img/compProg.png>]
+<img/Impl1.png, id=72, 597.432pt x 498.663pt>
+File: img/Impl1.png Graphic file (type png)
+ <use img/Impl1.png>
+Package pdftex.def Info: img/Impl1.png used on input line 474.
+(pdftex.def)             Requested size: 358.46196pt x 299.2001pt.
+
+<img/impl2.png, id=73, 1008.76875pt x 525.965pt>
+File: img/impl2.png Graphic file (type png)
+ <use img/impl2.png>
+Package pdftex.def Info: img/impl2.png used on input line 484.
+(pdftex.def)             Requested size: 403.50035pt x 210.38226pt.
+
+<img/app1.png, id=74, 452.69125pt x 405.515pt>
+File: img/app1.png Graphic file (type png)
+ <use img/app1.png>
+Package pdftex.def Info: img/app1.png used on input line 498.
+(pdftex.def)             Requested size: 181.07329pt x 162.20311pt.
+
+<img/app2.png, id=75, 711.65875pt x 493.845pt>
+File: img/app2.png Graphic file (type png)
+ <use img/app2.png>
+Package pdftex.def Info: img/app2.png used on input line 508.
+(pdftex.def)             Requested size: 249.08429pt x 172.84833pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Overfull \hbox (14.13841pt too wide) in paragraph at lines 466--512
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Overfull \hbox (59.1768pt too wide) in paragraph at lines 466--512
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--512
+
+ []
+
+[16 <./img/Impl1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <./img/impl2.png> <./img/app1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
+
+ []
+
+[18 <./img/app2.png>] [19] <img/ale.jpg, id=92, 171.4405pt x 200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
- <use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 510.
+
+<use img/ale.jpg>
+Package pdftex.def Info: img/ale.jpg used on input line 552.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
-
-<img/bea.jpg, id=75, 168.63pt x 196.48407pt>
+ <img/bea.jpg, id=93, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
- <use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 510.
-(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
 
-<img/io.jpg, id=76, 177.66376pt x 188.705pt>
+<use img/bea.jpg>
+Package pdftex.def Info: img/bea.jpg used on input line 552.
+(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
+ <img/io.jpg, id=94, 177.66376pt x 188.705pt>
 File: img/io.jpg Graphic file (type jpg)
- <use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 510.
+
+<use img/io.jpg>
+Package pdftex.def Info: img/io.jpg used on input line 552.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[17 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
+[20 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
 Here is how much of TeX's memory you used:
- 4145 strings out of 493117
- 56441 string characters out of 6135434
+ 4165 strings out of 493117
+ 56776 string characters out of 6135434
  134363 words of memory out of 5000000
- 7542 multiletter control sequences out of 15000+600000
+ 7558 multiletter control sequences out of 15000+600000
  13473 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,32p,931b,222s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr
 /local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (17 pages, 2518517 bytes).
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on RelazioneISS.pdf (20 pages, 3351048 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
