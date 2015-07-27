@@ -139,17 +139,15 @@ Il compimento e la gestione del seguente progetto si portano dunque al quarto li
 \labelsec{Vision}
 Parlando di robot, questi sistemi eterogenei software e hardware sono diventati sempre più pervasivi nell'ambito umano, sia da un punto di vista di utilità, si pensi solamente a quelli adibiti alla pulizia in maniera autonoma, ma anche dal punto di vista di semplici strumenti costruiti allo scopo di divertirsi e imparare che hanno portato alla generazione di un vero e proprio businnes.
 Quello sul quale ci si vuole concentrare è l'ambito delle Internet Of Things (IoT) che è un settore tutt'ora in espansione e per il quale, per fortuna, ancora non si conoscono limiti di utilizzo.
-Il corso proposto, e in generale l'Università si propone di fornire una serie di basi che spaziano dal punto di vista progettuale, implementando così anche le tecniche di Learn By Doing, a quella realizzativo di sistemi che possano essere a loro volta software factory per sistemi robotici immersi nelle differenti aree dell'IoT. 
+Il corso proposto, e in generale l'Università si propone di fornire una serie di basi che spaziano dal punto di vista progettuale, implementando così anche le tecniche di Learn By Doing, a quello realizzativo di sistemi che possano essere a loro volta software factory per sistemi robotici immersi nelle differenti aree dell'IoT. 
 Il campo di applicazione scelto, appunto quello dei robot, risulta possedere delle caratteristiche di forte dinamicità dettate dagli avanzamenti tecnologici fatti negli ultimi anni che richiedono un software sempre aggiornato all'ultima versione, in grado di funzionare correttamente in ogni condizione. Quest'ultimo si traduce nella stesura di software, sempre con meno tempo a disposizione ma, che possa essere facilmente testato e validato. Per questi motivi a supporto dell'attività didattica di sviluppo software si vogliono sperimentare delle metodologie di produzione del software  gestite da software factory, così da avere sempre una base di conoscenza consistente e che permettano la modifica e il riutilizzo di codice prodotto precedentemente, così da poterlo fare in tempi brevi per poi sottoporlo a verifiche da parte del personale.
 Per questi motivi il team prevede l'utilizzo di \textbf{Domani Specific Language} per la produzione di codice abbattendo i tempi e i costi di produzione e gestione.
-
-
 %===========================================================================
 
 %===========================================================================
 \section{Goals}
 \labelsec{Goals}
-L'obiettivo non è solamente quello di realizzare quando descritto nella sezione delle richieste, ma prevede anche uno studio delle metodologie di realizzazione dei sistemi di questo tipo seguendo le linee guida esposte a lezione.
+L'obiettivo non è solamente quello di realizzare quanto descritto nella sezione delle richieste, ma prevede anche uno studio delle metodologie di realizzazione dei sistemi di questo tipo seguendo le linee guida esposte a lezione.
 Relativamente al problema in esame si vuole riconoscere e valutare la presenza di un abstraction gap già al termine della fase di analisi del problema, riuscendo inoltre a discriminare tra gli aspetti relativi al dominio in questione (\textbf{domain specific}) e quelli relativi alla realizzazione dell'applicazione (\textbf{application specific}), come l'ipotesi tecnologica influisca sul processo di produzione del software.	
 Altro punto fondamentale sul quale si vuole porre attenzione è l'estensione del Domain Specific Language aziendale utilizzato così da poter costituire un patrimonio informativo comune sempre aggiornato con nuove soluzione tecnologiche adatte a nuove problematiche evidenziate.
 La costituzione di un prototipo funzionante risulta essere un ulteriore goal da soddisfare, questo, come già detto, risulta essere realizzato con l'utilizzo della software factory, la quale, permette una rapida e robusta prototipazione al termine della fase di analisi consentendone la presentazione al committente per la pianificazione delle successive attività di progetto e sviluppo attraverso specifico workplan.	
@@ -175,7 +173,7 @@ Progettare un sistema software che:
 \section{Requirement analysis}
 \labelsec{ReqAnalysis}
 
-Avendo definto i requisiti nella prima relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, si specificano in maniera più approfondita delle aree che non erano state identificate:
+Avendo definito i requisiti nella prima relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, si specificano in maniera più approfondita delle aree che non erano state identificate:
 \begin{itemize}
 	\item Definizione di una sequenza di azioni;
 	\item Definizione di azione temporizzata;
@@ -190,7 +188,7 @@ Una sequenza di azioni viene identificata da una serie di azioni successive che 
  Comando impartito al robot che prevede nella sua definizione oltre al tipo di azione anche la sua effettiva durata.
 
 \subsection{Azione interrompibile}
-Azione che prevede una esecuzione con tipologia asincrona ovvero all'interno del proprio piano, una azione asincrona prevede la possibilità di essere interrotta alla ricezione di una nuova azione o di un comando di halt proveniente dalla console.
+Un'azione che prevede la possibilità di essere interrotta alla ricezione di un comando di halt proveniente dalla console.
 
 \subsection{Console remota}
 La console remota riveste il ruolo di emittente di determinati segnali in grado di essere captati e interpretati dal robot specifico.
@@ -221,7 +219,7 @@ La console remota riveste il ruolo di emittente di determinati segnali in grado 
 	\hline
 	Precondizione: & Il robot deve essere acceso. \\
 	\hline
-	Scenario Principale: & Il robot sta eseguendo i comandi previsti dal piano specificato.\\
+	Scenario Principale: & Il robot sta eseguendo i comandi previsti dalla sequenza di azioni specificate.\\
 	\hline
 	Scenario Secondario: & Assenti.\\
 	\hline
@@ -235,13 +233,13 @@ La console remota riveste il ruolo di emittente di determinati segnali in grado 
 	\hline
 	ID: & Ricezione comando "halt".\\
 	\hline
-	Descrizione: & Il sistema percepisce un comando "halt" inviato da console remota e reagisce interrompendo il piano in esecuzione. \\ 
+	Descrizione: & Il sistema percepisce un comando "halt" inviato da console remota e reagisce interrompendo l'azione in esecuzione. \\ 
 	\hline
 	Attore: & Utente \\
 	\hline
 	Precondizione: & Il robot deve essere acceso e si sta muovendo in maniera autonoma.\\
 	\hline
-	Scenario Principale: & Il robot termina il piano in esecuzione.\\
+	Scenario Principale: & Il robot termina l'azione in esecuzione.\\
 	\hline
 	Scenario Secondario: & Assenti.\\
 	\hline
@@ -256,7 +254,7 @@ La console remota riveste il ruolo di emittente di determinati segnali in grado 
 	ID: & Ricezione comandi di movimento.\\
 	\hline
 	Descrizione: & Il robot percepisce un comando di movimento inviato da
-	console remota ed esegue l?azione corrispondente. \\ 
+	console remota ed esegue l'azione corrispondente. \\ 
 	\hline
 	Attore: & Utente \\
 	\hline
@@ -280,16 +278,16 @@ Si veda la relazione precedente\footnote{Ingegneria dei Sistemi Software A diffe
 %===========================================================================
 \section{Problem analysis}
 \labelsec{ProblemAnalysis}
-Visto il contesto nel quale ci si pone, le problematiche identificate hanno portato, come citato all'interno dell'analisi dei requisiti, alla definizioni di una serie di concetti per le varie modalità di esecuzione delle azioni. Occorre identificare una modalità che ci permetta di astrarre dallo specifico problema in gioco (ovvero quello dei robot) e che ci consenta di definire una soluzione generale alla problematica, sfruttano il robot come approccio, definendo i concetti validi anche per future fasi evolutive del progetto. I requisiti ci portano a riconoscere una serie di problematiche delle quali ci andremo ad occupare: definizioni di azioni sincrone/asicrone ed azioni interrompibili.\\
-Ponendoci nel contesto di esempio, il robot deve essere sensibile ad alcuni cambiamenti che potranno avvenire nell'ambiente circostante nel quale è situato. Occorre, quindi, definire la gestione di questi cambiamenti in modo che durante l'esecuzione delle azioni previste, nel caso di rilevamento di un cambiamento, il robot possa reagire di conseguenza. In particolare si vuole fare in modo che l'azione intrapresa dal robot si blocchi e si possano eseguire azioni alternative, al termine di queste sarà necessario valutare se continuare o meno con l'esecuzione precedente che include le azioni già pianificate.\\
+Visto il contesto nel quale ci si pone, le problematiche identificate hanno portato, come citato all'interno dell'analisi dei requisiti, alla definizione di una serie di concetti per le varie modalità di esecuzione delle azioni. Occorre identificare una modalità che ci permetta di astrarre dallo specifico problema in gioco (ovvero quello dei robot) e che ci consenta di definire una soluzione generale alla problematica, sfruttando il robot come approccio, definendo i concetti validi anche per future fasi evolutive del progetto. I requisiti ci portano a riconoscere una serie di problematiche delle quali ci andremo ad occupare: definizioni di azioni sincrone/asicrone ed azioni interrompibili.\\
+Ponendoci nel contesto di esempio, il robot deve essere sensibile ad alcuni cambiamenti che potranno avvenire nell'ambiente circostante nel quale è situato. Occorre, quindi, definire la gestione di questi cambiamenti in modo che durante l'esecuzione delle azioni previste, nel caso di rilevamento di un cambiamento, il robot possa reagire di conseguenza. In particolare si vuole fare in modo che l'azione intrapresa dal robot si blocchi e si possano eseguire azioni alternative, al termine di queste sarà necessario valutare se continuare o meno con l'esecuzione precedente che include le azioni già pianificate. Da qui in avanti viene definito \textbf{piano} come sequenza di azioni.\\
 Così facendo occorre definire, dato un robot, tutti i cambiamenti ai quali dev'essere in grado di reagire, descrivendo i comportamenti da avere in ogni situazione e le modalità di controllo che permettano di fare una valutazione sullo stato di avanzamento dell'azione corrente intrapresa dal robot.
 Inoltre è necessario riconoscere quando un'azione è giunta al termine in modo da controllare lo stato dell'azione ed eventualmente proseguire con la successiva.\\
-La base di partenza per noi è l'astrazione di classe BaseRobot il quale tramite apposito metodo ha la possibilità di eseguire azioni tramite l'uso di appositi attuatori, all?interno del mondo reale. Legata alla problematica identificata, sorge inoltre il problema di specificare la tipologia di azione da utilizzare all'interno al contesto in esame dato che questa, avrà effetti sul controllo del robot stesso e sul comportamento dell'architettura logica creata a valle.\\
+La base di partenza per noi è l'astrazione di classe \textbf{BaseRobot} il quale tramite apposito metodo ha la possibilità di eseguire azioni tramite l'uso di appositi attuatori, all'interno del mondo reale. Legata alla problematica identificata, sorge inoltre il problema di specificare la tipologia di azione da utilizzare all'interno del contesto in esame dato che questa, avrà effetti sul controllo del robot stesso e sul comportamento dell'architettura logica creata a valle.\\
 Si vogliono fissare le definizioni relative alle possibili azioni utilizzate all'interno del contesto del problema appena definito:
 \begin{itemize}
-\item \textbf{Azione sincrona}: si considera un'esecuzione sincrona, di una azione, quando questa viene concretizzata e occorre attendere la terminazione della stessa per poter restituire il controllo al chiamante.
+\item \textbf{Azione sincrona}: si considera un'esecuzione sincrona quando questa viene concretizzata e occorre attendere la terminazione della stessa per poter restituire il controllo al chiamante.
 
-\item \textbf{Azione asincrona}: si definisce un'esecuzione asincrona quando una determinata azione può essere eseguita senza che il chiamante debba attendere la fine dell'esecuzione dato che il controllo viene immediatamente restituito al chiamante.
+\item \textbf{Azione asincrona}: si definisce un'esecuzione asincrona quando questa può essere eseguita senza che il chiamante debba attendere la fine dell'esecuzione dato che il controllo viene immediatamente restituito al chiamante.
 \end{itemize}
 
 Rispetto alla fase precedente si deve considerare un sistema non più concentrato ma distribuito, infatti l'utilizzo della console remota rende necessaria la definizione della comunicazione tra quest'ultima e il robot. Dev'essere definito un comando di "halt" che la console sia in grado di inviare al robot e quest'ultimo dovrà essere in grado di interpretarlo.
@@ -301,12 +299,12 @@ Ci poniamo nell'ottica di ottenere un modello del sistema funzionante e globalme
 \subsubsection{Struttura}
 Da quanto detto, si identificano principalmente tre sottosistemi:
 \begin{itemize}
-	\item altri eventuali sistemi in grado di ricevere segnali presenti nell'ambiente (world);
-	\item console remota;
 	\item robot system.
+	\item console remota;
+	\item altri eventuali sistemi in grado di ricevere segnali presenti nell'ambiente (world);
 \end{itemize}
 
-Mentre con il primo si identifica l'\textbf{ecosistema} in cui opera il robot ed altri eventuali sistemi esterni presenti, la console remota riveste il ruolo di emittente di determinati segnali in grado di essere captati dal robot system specifico o da una serie di robot interessati ad una specifica tipologia. Quest'ultimo risulta essere strutturato su una serie di livelli che vanno ad arricchire le caratteristiche del robot stesso, raggiungendo così un livello di astrazione più consono al progetto richiesto.
+Mentre con l'ultimo si identifica l'\textbf{ecosistema} in cui opera il robot ed altri eventuali sistemi esterni presenti, la console remota riveste il ruolo di emittente di segnali in grado di essere captati dal robot system specifico o da una serie di robot interessati ad una determinata tipologia. Il \textbf{RobotSystem} risulta essere strutturato su una serie di livelli che vanno ad arricchire le caratteristiche del robot stesso, raggiungendo così un livello di astrazione più consono al progetto richiesto.
 \\
 \newline
 \\
@@ -321,7 +319,7 @@ Mentre con il primo si identifica l'\textbf{ecosistema} in cui opera il robot ed
 \newline
 \\
 All'interno del diagramma si è voluto anche rappresentare il \textbf{"mondo"}, situando così il robot ed identificando il contesto di esecuzione del piano stesso.
-Un'ulteriore sottosistema identificato, come già detto, è la \textbf{console remota} che, ai fini dettati dal testing del sistema, verrà posta all'interno del sistema RemoteConsole e sarà quindi in grado di inviare il messaggio di "halt".
+Un ulteriore sottosistema identificato, come già detto, è la \textbf{console remota} che, ai fini dettati dal testing del sistema, verrà posta all'interno del sistema RemoteConsole e sarà quindi in grado di inviare il messaggio di "halt".\\
 Si lascia inoltre spazio, in questa rappresentazione, ad ulteriori sistemi presenti nel "mondo" ed in grado di interagire con i principali sistemi proposti nell'architettura logica, in modo da focalizzarsi solo sulla definizione dei vincoli di interazione e senza complicare ulteriormente la struttura e il comportamento del sistema nel suo complesso.
 
 \subsubsection{Interazione}
@@ -341,8 +339,8 @@ Ricordando la base di partenza ovvero il contesto distribuito del robot, occorre
 \\
    
 \subsubsection{Comportamento}
-Viste le premesse fatte negli capitoli precedenti, e utilizzando la base di conoscenza a nostra disposizione proveniente da specifici corsi di studi, la problematica identificata ci spinge a modellare il comportamento del robot come un automa a stati finiti.
-Un primo prototipo potrebbe essere il seguente in cui viene rappresentata l?esecuzione di un azione che, nel caso in cui non avvengo la ricezione del comando "halt", termina.
+Viste le premesse fatte nei capitoli precedenti, e utilizzando la base di conoscenza a nostra disposizione proveniente da specifici corsi di studi\footnote{Sistemi Distribuiti, Programmazione Avanzata e Paradigmi, Linguaggi di Programmazione e Modelli Computazionali}, la problematica identificata ci spinge a modellare il comportamento del robot come un automa a stati finiti.
+Un primo prototipo potrebbe essere il seguente in cui viene rappresentata l'esecuzione di un azione che, nel caso in cui non avvenga la ricezione del comando "halt", termina.
 \\
 \newline
 \\
@@ -356,11 +354,21 @@ Un primo prototipo potrebbe essere il seguente in cui viene rappresentata l?esec
 \\
 \newline
 \\
-Per modellare il "comportamento di default" del robot, quindi l'esecuzione dell'azione senza l'interruzione provieniente dalla console remota, andrebbe introdotto il concetto di "epsilon mossa". Per epsilon mossa di intende una transizione che avviene senza avere nulla in ingresso, che è proprietà specifica degli automi a stati finiti. Questa soluzione non è modellabile all'interno del dominio applicativo fin qui definito, infatti supponendo di utilizzare un azione asincrona, questa terminerà immediatamente senza che venga effettivamente attuata nel mondo. Nasce quindi la necessità di introdurre un livello di astrazione superiore che permetta di esprimere in modo corretto il comportamento del robot e che consenta di effettuare la transizione di stato solo al momento opportuno, ovvero al termine dell'esecuzione dell'azione.
+Per modellare il "comportamento di default" del robot, quindi l'esecuzione dell'azione senza l'interruzione provieniente dalla console remota, andrebbe introdotto il concetto di \textbf{"epsilon mossa"}. Per epsilon mossa di intende una transizione che avviene senza avere nulla in ingresso, che è proprietà specifica degli automi a stati finiti. Questa soluzione non è modellabile all'interno del dominio applicativo fin qui definito, infatti supponendo di utilizzare un azione asincrona, questa terminerà immediatamente senza che venga effettivamente attuata nel mondo. Nasce quindi la necessità di introdurre un livello di astrazione superiore che permetta di esprimere in modo corretto il comportamento del robot e che consenta di effettuare la transizione di stato solo al momento opportuno, ovvero al termine dell'esecuzione dell'azione.\\
+\\
+\newline
+\\
+\begin{tabular}{ |c| }
+	\hline
+	Comportamento \\
+	\hline	
+	\includegraphics[scale = 0.8]{img/endOfAction.jpg}\\
+	\hline
+\end{tabular}
 
 \subsection{Abstraction gap}
-Avendo appena definito i concetti principali nei capitoli precedenti, ci si rende conto che la base di partenza considerata, ovvero il linguaggio OO Java, non permette di esprimere ad un sufficiente livello di astrazione le tematiche sopra citate e il dislivello dal punto di vista tecnologico sarebbe troppo ampio da essere colmato. Si procede quindi alla definizione di una serie di livelli di astrazione che permettano di arrivare gradualmente a definire le modalità di approccio al problema.\\
-Il primo che occorre è la possibilità di una gestione tramite gli attori in quando il modello computazionale che si rifà ad uno stile proattivo/reattivo riesce a modellare perfettamente il comportamento di un robot. Questo modello in realtà risiede già all'interno del framework computazione che utilizzeremo (qActor) e potrà quindi essere considerato come assodato per le future implementazioni del problema. La base di partenza, risulta essere quindi il RobotActor, come già definito nella precedente relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, esteso con la possibilità di ricevere comandi inviati dalla console remota oppure dal browser.
+Avendo appena definito i concetti principali nei capitoli precedenti, ci si rende conto che la base di partenza considerata, ovvero il linguaggio OO Java, non permette di esprimere ad un sufficiente livello di astrazione le tematiche sopra citate e il dislivello dal punto di vista tecnologico sarebbe troppo ampio da essere colmato in un unico step computazionale. Si procede quindi alla definizione di una serie di livelli di astrazione che permettano di arrivare gradualmente a definire le modalità di approccio al problema.\\
+Il primo che occorre è la possibilità di una gestione tramite gli attori in quanto quest'ultimo modello computazionale, che si rifà ad uno stile proattivo/reattivo, riesce a modellare perfettamente il comportamento di un robot. Questo modello in realtà risiede già all'interno del framework computazionale che utilizzeremo (qActor) e potrà quindi essere considerato come assodato per le future implementazioni del problema. La base di partenza, risulta essere quindi il RobotActor, come già definito nella precedente relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, esteso con la possibilità di ricevere comandi inviati dalla console remota oppure dal browser.
 \\
 \newline
 \\
@@ -374,22 +382,20 @@ Il primo che occorre è la possibilità di una gestione tramite gli attori in quan
 \\
 \newline
 \\
-E' stato detto in precedenza che per modellare correttamente il comportamento del robot occorre introdurre il concetto di automa a stati finiti, questo ci induce a passare dalla programmazione message passing quale Java a quella event based. Questo ci permette di definire che il cambiamento che permette di eseguire la transizione da uno stato all'altro dell'automa può essere identificato come un evento. In questo modo si vuole ottenere una entità reattiva che nel momento in cui esegue un?azione possa comunque essere sensibile a determinati "cambiamenti". Infatti, supponendo di essere in uno stato in cui viene eseguita una determinata azione, il robot si mantiene reattivo e nel momento in cui riceve un particolare evento è in grado transitare in un determinato stato che permetta la gestione dell?evento stesso.\\
+E' stato detto in precedenza che per modellare correttamente il comportamento del robot occorre introdurre il concetto di automa a stati finiti, questo ci induce a passare dalla programmazione message passing quale Java a quella event based. Questo ci permette di definire che il cambiamento che permette di eseguire la transizione da uno stato all'altro dell'automa può essere identificato come un \textbf{evento}. In questo modo si vuole ottenere una entità reattiva che nel momento in cui esegue un'azione possa comunque essere sensibile a determinati "cambiamenti". Infatti, supponendo di essere in uno stato in cui viene eseguita una determinata azione, il robot si mantiene reattivo e nel momento in cui riceve un particolare evento è in grado transitare in un determinato stato che permetta la gestione dell'evento stesso.\\
 In particolare, con questa modellazione, si è in grado di definire un evento che viene lanciato al termine dell'esecuzione di un azione sincrona/asincrona.
-Ovviamente per un particolare stato possono essere definiti più eventi ai quali il robot dev'essere sensibile ed altrettante transizioni di stato che permettano di gestirli. In un contesto generale, quando viene ricevuto un evento di halt, che provoca una transizione di stato, esso viene gestito eseguendo un piano alternativo e fermando l'azione eseguita in precedenza. Nel caso del contesto specifico questo non è necessario in quanto, l'esecuzione di una nuova azione da parte del robot, interrompe/termina automaticamente quella precedente.
+Ovviamente per un particolare stato possono essere definiti più eventi ai quali il robot dev'essere sensibile ed altrettante transizioni di stato che permettano di gestirli. In un contesto generale, quando viene ricevuto un evento di "halt", che provoca una transizione di stato, esso viene gestito eseguendo un piano alternativo e fermando l'azione eseguita in precedenza. Nel caso del contesto specifico questo non è necessario in quanto, l'esecuzione di una nuova azione da parte del robot, interrompe/termina automaticamente quella precedente.
 
 \subsection{Risk analysis}
 \labelsec{RiskAnal}
-Dato l'ambito nel quale si colloca il progetto, ovvero distribuito ed eterogeneo, occorre considerare il fatto che all'interno dei vari nodi che costituiscono la rete di robot, che possono interagire nell'ambiente, vengono propagati un numero considerevole di eventi.\\
-Occorre trovare un metodo per agevolare la diffusione dei vari eventi agli agenti che sono veramente interessati a riceverli, per fare questo è possibile pensare ad una modalità di identificazione degli eventi a seconda del contesto di provenienza e ad un'infrastruttura al di sotto che dovrebbe essere in grado di filtrare la propagazione degli eventi in base al loro identificativo. Un possibile esempio potrebbe prevedere una categorizzazione tra eventi locali quindi dello stesso nodo ed eventi proveniente da contesti esterni. In una prima fase di testing il robot potrà essere reattivo ai soli eventi locali mentre gli eventi provenienti da altri contesti potranno essere utilizzati in future implementazioni di robot cooperativi.
-
+Dato l'ambito nel quale si colloca il progetto, ovvero distribuito ed eterogeneo, occorre considerare il fatto che all'interno dei vari nodi che costituiscono la rete di robot vengono propagati un numero considerevole di eventi.\\
+Occorre trovare un metodo per agevolare la diffusione dei vari eventi alle entià che sono veramente interessate a riceverli, per fare questo è possibile pensare ad una modalità di identificazione degli eventi a seconda del contesto di provenienza e ad un'infrastruttura al di sotto che dovrebbe essere in grado di filtrare la propagazione degli eventi in base al loro identificativo. Un possibile esempio potrebbe prevedere una categorizzazione tra \textbf{eventi locali} quindi dello stesso nodo ed \textbf{eventi esterni} proveniente da altri contesti. In una prima fase di testing il robot potrà essere reattivo ai soli eventi locali mentre gli eventi estermo potranno essere utilizzati in future implementazioni di robot cooperativi.
 %===========================================================================
 \section{Work plan}
 \labelsec{wplan}
 
-A fronte di quanto richiesto nei requisiti risulta fino dall'inizio del processo la necessita? di dividere lo sviluppo del sistema in macro-iterazioni, nella precedente relazione è stata presentata la risoluzione alla problematica di esecuzione di azioni da parte di un robot, mentre in questa si presentano le azioni che hanno portato alla creazione di una infrastruttura software che permetta ad un robot l'esecuzione di un piano rimanendo comunque reattivo a stimoli esterni come allarmi o comandi inviati dall'utente.\\
-Il Piano di lavoro risulta essere sostanzialmente il medesimo di quello presentato precedentemente: infatti si prevede la fase di analisi dei requisiti che porta a produrre un modello del dominio non ambiguo e condiviso con il committente e con le parti in gioco. Successivamente si andra? a svolgere un'analisi dei problemi evidenziati, avente come obiettivo quello di produrre un'architettura logica che possa essere resiliente anche a problematiche non direttamente collegate con il problema in questione, producendo quindi una evoluzione della architettura logica precende.
-
+A fronte di quanto richiesto nei requisiti risulta fino dall'inizio del processo la necessita di dividere lo sviluppo del sistema in macro-iterazioni. Nella precedente relazione è stata presentata la risoluzione alla problematica di esecuzione di azioni da parte di un robot, mentre in questa si presentano le azioni che hanno portato alla creazione di una infrastruttura software, che permetta ad un robot l'esecuzione di un piano rimanendo comunque reattivo a stimoli esterni, come allarmi o comandi inviati dall'utente.\\
+Il Piano di lavoro risulta essere sostanzialmente medesimo a quello presentato precedentemente: infatti si prevede la fase di analisi dei requisiti che porta a produrre un modello del dominio non ambiguo e condiviso con il committente e con le parti in gioco. Successivamente si andrà a svolgere un'analisi dei problemi evidenziati, avente come obiettivo quello di produrre un'architettura logica che possa essere resiliente anche a problematiche non direttamente collegate con il problema in questione, producendo quindi un'evoluzione dell'architettura logica precedentemente presentata.
 %===========================================================================
 
 %===========================================================================
@@ -398,14 +404,14 @@ Il Piano di lavoro risulta essere sostanzialmente il medesimo di quello presenta
 
 Il progetto risulta essere così suddiviso:
 \begin{itemize}
-	\item \textbf{it.unibo.qactor.robot.test}: all'interno si possono trovare due file java. \textbf{RobotActorInterruptible.java} il quale contine la definizione del piano di esempio, nel nostro caso i comandi eseguiti dal robot saranno: forward, left, forward; e la classe \textbf{CtxRobotInterruptible} che risulta essere l'entry point del sistema.
+	\item \textbf{it.unibo.qactor.robot.test}: all'interno si possono trovare due file java. \textbf{RobotActorInterruptible.java} il quale contiene la definizione del piano di esempio, nel nostro caso i comandi eseguiti dal robot saranno: forward, left, forward; e la classe \textbf{CtxRobotInterruptible} che risulta essere l'entry point del sistema.
+	\item \textbf{it.unibo.qactor.robot.console}: all'interno si trovano i file di gestione della console,	 la quale dovrà essere eseguita su terminali Android.
 \end{itemize}
 Per quanto rigurada il codice riportato di seguito, si riferisce al piano di esempio costituito dalle seguenti azioni:
 \\
 \begin{math}
 	\textbf{FORWARD}\rightarrow \textbf{LEFT} \rightarrow \textbf{FORWARD}
 \end{math}
-
 %===========================================================================
 
 \subsection{Structure}
@@ -424,7 +430,7 @@ La struttura delle classi del progetto viene di seguito riportata. Per consentir
 
 \subsection{Interaction}
 
-Anche per quanto riguarda l'interazione, si prende come esempio il piano precedentemente definito e si riporta lo stack di chiamate che avvengono nel normale funzionamento del sistema, riportando inoltre i possibili comandi che possono avvenire dalla console remota.
+Anche per quanto riguarda l'interazione, si prende come esempio il piano precedentemente definito e si riporta lo stack di chiamate che avvengono nel normale funzionamento del sistema, riportando inoltre i possibili comandi che possono provenire dalla console remota.
 \\
 \newline
 \\
@@ -437,10 +443,7 @@ Anche per quanto riguarda l'interazione, si prende come esempio il piano precede
 \end{tabular}
 
 \subsection{Behaviour}
-Il comportamento del sistema viene, per rendere una più facile lettura, legato ad un esempio di implementazione il cui codice sarà presentato nella apposita sezione.
-\\
-\newline
-\\
+Come nel caso dell'interazione, anche il comportamento prende come esempio il piano precedentemente definito.
 \begin{tabular}{ |c| }
 	\hline
 	Behaviour View\\ 
@@ -451,14 +454,13 @@ Il comportamento del sistema viene, per rendere una più facile lettura, legato a
 \\
 \newline
 \\
-L'esecuzione del piano viene affidata alla funzione \textbf{executeActionAsFSM()} che crea un automa a stati finiti, come precedentemente indicato, che permette di gestire tutti gli eventuali eventi che possono arrivare durante l'esecuzione di un'azione e i possibili piani da attuare. In questo caso l'unico evento che dev'essere gestito è quello di "halt" che interrompe l'esecuzione del piano corrente e ferma il movimento del robot. E' inoltre prevista la possibilità di riprendere il piano da dove era stato interrotto, in questo caso viene fatta una distinzione tra:
+L'esecuzione del piano viene affidata alla funzione \textbf{executeActionAsFSM()} che crea un automa a stati finiti, come precedentemente indicato, che permette di gestire tutti gli eventuali eventi che possono arrivare durante l'esecuzione di un'azione e i possibili piani da attuare. In questo caso l'unico evento che dev'essere gestito è quello di "halt", che interrompe l'esecuzione del piano corrente e ferma il movimento del robot. E' inoltre prevista la possibilità di riprendere il piano da dove era stato interrotto, in questo caso viene fatta una distinzione tra:
 \begin{itemize}
 	\item \textbf{Azione compensabile}: definita come azione che dopo essere stata interrotta, permetta l'esecuzione di un'altra azione che la compensa o la completa;
 	\item \textbf{Azione non compensabile}: definita come un'azione che, a seguito di un'interruzione, non può essere ripristinata o completata (es. l'esecuzione di un suono).
 \end{itemize}
-Per poter eseguire azioni sincrone/asincrone che abbiano la possiblità di essere interrotte viene modellata l'entità TimedAction che ha la caratteristica di svolgere l'azione e emettere un evento al termine dell'azione stessa. L'utilizzo di un ID per ogni azione permette di specificare a quale azione si rivolge lo specifico evento di terminazione. L'evento lanciato è univocamente identificato con un ID in modo da poter essere associato ad una determinata azione, in caso contrario, avendo un evento generico e supponendo di avere una sequenza di azioni "forward", l'evento bloccherà l'azione a prescindere da quella realmente terminata.
-Tutti gli eventi generati su un nodo vengono propagati verso gli altri nodi, per questo alcuni eventi sono definiti come "locali" ovvero che non necessitano di essere propagati sulla rete (es. evento di terminazione azione).
-Nel contesto del problema le azioni eseguite dal robot sono eseguite in modalità sincrona, infatti, nel caso in cui si fosse utilizzata la modalità asincrona il robot non avrebbe il tempo di attuare l'azione in quanto sarebbe subito inviato l'evento di terminazione e si passerebbe all?azione seguente.
+Per poter eseguire azioni sincrone/asincrone che abbiano la possiblità di essere interrotte viene modellata l'entità \textbf{TimedAction}, che ha la caratteristica di svolgere l'azione ed emettere un evento al termine dell'azione stessa. L'utilizzo di un ID per ogni azione permette di specificare a quale azione si rivolge lo specifico evento di terminazione. L'evento lanciato è univocamente identificato con un ID in modo da poter essere associato ad una determinata azione, in caso contrario, avendo un evento generico e supponendo di avere una sequenza di azioni "forward", l'evento bloccherà l'azione a prescindere da quella realmente terminata.L'evento associato alla terminazione dell'azione si considera essere locale.\\
+Nel contesto del problema, le azioni svolte dal robot sono eseguite in modalità sincrona, infatti, nel caso in cui si fosse utilizzata la modalità asincrona il robot non avrebbe avuto il tempo di attuare l'azione in quanto verrebbe subito inviato l'evento di terminazione e si passerebbe all'azione seguente.
 %===========================================================================
 \section{Implementation}
 \labelsec{Implementation}
@@ -487,7 +489,7 @@ Di seguito si presenta il codice delle classi citate nella sezione di progetto.
 \\
 \newline
 \\
-Si riportano inoltre una serie di schermate dell'applicativo console il quale viene utilizzato come controllo per il robot da terminare Android.
+Si riportano inoltre una serie di schermate dell'applicativo console il quale viene utilizzato come controllo per il robot da terminale Android.
 \\
 \newline
 \\
@@ -514,25 +516,24 @@ Si riportano inoltre una serie di schermate dell'applicativo console il quale vi
 \section{Testing}
 \labelsec{testing}
 
-La fase di testing delle nuove funzionalità è stata effettuata testando prima il sistema mock ovvero virtualizzato mentre una seconda fase, quella relativa al progetto, viene testata con lo stesso robot fisico (Talos) tramite il quale erano stati effettuati i test nella prima parte.
+La fase di testing delle nuove funzionalità è stata effettuata testando prima il sistema mock ovvero virtualizzato, mentre una seconda fase, quella relativa al progetto, viene inoltre testata con lo stesso robot fisico (Talos) tramite il quale erano stati effettuati i test nella prima parte.
 %===========================================================================
 
 %===========================================================================
 \section{Deployment}
 \labelsec{Deployment}
 
-Il processo produttivo affrontato ha come fase terminale la gestione del deployment applicativo. Si prevede di distribuire l'applicazione finale mediante l'utilizzo di un pacchetto jar che dovrà essere eseguito sul robot, in particolare sul RaspBerry il quale deve inoltre essere connesso tramite apposito toogle wifi alla rete denominata natspot che viene utilizzata come mezzo trasmissivo dei messaggi e degli eventi da e per il robot. Si prevede la distribuzione dell'applicazione android sottoforma di un archivio con estensione APK, essendo il formato standard per la distribuzione delle applicazioni di quel tipo.\\
+Il processo produttivo affrontato ha come fase terminale la gestione del deployment applicativo. Si prevede di distribuire l'applicazione finale mediante l'utilizzo di un pacchetto jar che dovrà essere eseguito sul robot, in particolare sul RaspBerry il quale deve inoltre essere connesso tramite apposito dongle wifi alla rete denominata \textbf{"natspot"} che viene utilizzata come mezzo trasmissivo dei messaggi e degli eventi da e per il robot. Si prevede la distribuzione dell'applicazione android sottoforma di un archivio con estensione APK, essendo il formato standard per la distribuzione delle applicazioni di quel tipo.\\
 
 %===========================================================================
 
 %===========================================================================
 \section{Maintenance}
 \labelsec{Maintenance}
-
-Ci si rende conto che il progetto  realizzato presenta una serie di problematiche, identificate nella fase di analisi del problema, che sono comuni a progetti inseriti nell'ambito della programmazione distribuita ed eterogenea. Si è cercato di risolvere le problematiche presentate ad un livello generale così da poter inglobare concetti anche non direttamente correlati alle richieste ma che sono comunque legate all'ambito.
-Arrivati a questo punto, si vuole consolidare in maniera sicura il know-how sviluppato riguardo al problema proposto, utilizzandolo come base salda per futuri progetti ed evitando così di porsi nuovamente problemi per situazioni già affrontate in precedenza evitando così di riscrivere parti di codice.\\
+Ci si rende conto che il progetto  realizzato presenta una serie di problematiche, identificate nella fase di analisi del problema, che sono comuni a progetti inseriti nell'ambito della programmazione distribuita ed eterogenea. Si è cercato di risolvere le problematiche presentate ad un livello generale così da poter inglobare concetti anche non direttamente correlati alle richieste ma che sono comunque legati all'ambito.
+Arrivati a questo punto, si vuole consolidare in maniera sicura il know-how sviluppato riguardo al problema proposto, utilizzandolo come base salda per futuri progetti, evitando così sia di porsi nuovamente problemi per situazioni già affrontate in precedenza ma anche la riscrittura di parti di codice.\\
 In tutto questo, l'aiuto fornito dall'infrastruttura dei QActor e RobotActor risulta essere molto valido e si vuole, con l'esperienza maturata, spostarsi su un modello implementativo del tipo Model Driven Developer che permetta la costruzione di modelli che si basino su quanto già appreso e creato in precedenza, spingendo per una fase di modellazione che porti alla generazione di un prototipo funzionante nel minore tempo possibile avendo una base di conoscenza del problema alle spalle ampia e solida.\\
-Le modalità a questo punto sono due: la prima prevede di creare una serie di plugin, legati al linguaggio fino a qui scelto, che dovranno essere distribuiti in ogni area di sviluppo aziendale; questo non risulta essere un approccio comodo nel momento in cui occorrerà affrontare le problematiche di upgrade al codice oppure. Quella più plausibile, prevede l'utilizzo dei concetti definiti per le problematiche anticipate e spostarli all'interno di un Domain Specific Language cosi da poter produrre già a livello di analisi dei prototipi funzionanti e demandare al livello progettuale solo la definizione di caratteristiche tecniche. In questo modo inoltre si risolve la problematica legata alla scelta della tipologia di linguaggio o di paradigma utile ai fini del progetto, rompendo i vincoli utilizzando un meta-modello custom personalizzabile secondo le nuove esigenze che potranno essere incontrate.
+Le modalità a questo punto sono due: la prima prevede di creare una serie di plugin, legati al linguaggio fino a qui scelto, che dovranno essere distribuiti in ogni area di sviluppo aziendale, questo non risulta essere un approccio comodo nel momento in cui occorrerà affrontare le problematiche di upgrade al codice; la seconda, quella più plausibile, prevede l'utilizzo dei concetti definiti per le problematiche anticipate precedentemente e spostarli all'interno di un Domain Specific Language così da poter produrre già a livello di analisi dei prototipi funzionanti e demandare al livello progettuale solo la definizione di caratteristiche tecniche. In questo modo inoltre si risolve la problematica legata alla scelta della tipologia di linguaggio o di paradigma utile ai fini del progetto, rompendo i vincoli utilizzando un meta-modello custom personalizzabile secondo le nuove esigenze che potranno essere incontrate.
 
 %===========================================================================
 \newpage
