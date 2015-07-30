@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  30 JUL 2015 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  30 JUL 2015 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -295,6 +295,11 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 118.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 130.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 130.
+
 Overfull \hbox (21.69989pt too wide) in paragraph at lines 132--138
 \T1/cmr/m/it/10 hanno por-tato, come ci-tato all'interno dell'analisi dei req-u
 i-siti, alla definizione
@@ -326,74 +331,38 @@ Overfull \hbox (11.19815pt too wide) in paragraph at lines 141--142
 ne as-in-crona quando questa
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 148.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 148.
-<img/Abstract.png, id=14, 444.2196pt x 789.1884pt>
-File: img/Abstract.png Graphic file (type png)
- <use img/Abstract.png>
-Package pdftex.def Info: img/Abstract.png used on input line 156.
-(pdftex.def)             Requested size: 222.10925pt x 394.59323pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--165
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./img/Abstract.png>] [4] <img/ale.jpg, id=29, 171.4405pt x 200.75pt>
+[2] [3] <img/ale.jpg, id=23, 171.4405pt x 200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
-
-<use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 186.
+ <use img/ale.jpg>
+Package pdftex.def Info: img/ale.jpg used on input line 176.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
- <img/bea.jpg, id=30, 168.63pt x 196.48407pt>
+
+<img/bea.jpg, id=24, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
-
-<use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 186.
+ <use img/bea.jpg>
+Package pdftex.def Info: img/bea.jpg used on input line 176.
 (pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
- <img/io.jpg, id=31, 177.66376pt x 188.705pt>
-File: img/io.jpg Graphic file (type jpg)
 
-<use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 186.
+<img/io.jpg, id=25, 177.66376pt x 188.705pt>
+File: img/io.jpg Graphic file (type jpg)
+ <use img/io.jpg>
+Package pdftex.def Info: img/io.jpg used on input line 176.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[5 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
+[4 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2730 strings out of 493117
- 36067 string characters out of 6135434
- 110264 words of memory out of 5000000
- 6148 multiletter control sequences out of 15000+600000
+ 2724 strings out of 493117
+ 35968 string characters out of 6135434
+ 112272 words of memory out of 5000000
+ 6144 multiletter control sequences out of 15000+600000
  14860 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,23p,867b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,23p,730b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></us
@@ -406,10 +375,10 @@ xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (5 pages, 297248 bytes).
+Output written on RelazioneISS.pdf (4 pages, 239969 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

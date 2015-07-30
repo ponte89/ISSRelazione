@@ -125,9 +125,9 @@
 
 %%% \sloppy
 
-\section{Problem Analisys and Abstraction Gap}
+\section{Problem Analysis}
 
-Riproponiamo\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Seconda} alcuni concetti relativi all'analisi del problema e alla definizione e identificazione dell'abstraction gap presentati nella precedente relazione utili contestualizzare questo lavoro:
+Riproponiamo alcuni concetti relativi all'analisi del problema presentati nella precedente relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Seconda Parte}, utili contestualizzare questo lavoro:
 \begin{quotation}\itshape
 	"Visto il contesto nel quale ci si pone, le problematiche identificate hanno portato, come citato all'interno dell'analisi dei requisiti, alla definizione di una serie di concetti per le varie modalità di esecuzione delle azioni. Occorre identificare una modalità che ci permetta di astrarre dallo specifico problema in gioco (ovvero quello dei robot) e che ci consenta di definire una soluzione generale alla problematica, sfruttando il robot come approccio, definendo i concetti validi anche per future fasi evolutive del progetto. I requisiti ci portano a riconoscere una serie di problematiche delle quali ci andremo ad occupare: definizioni di azioni sincrone/asicrone ed azioni interrompibili.\\
 	Ponendoci nel contesto di esempio, il robot deve essere sensibile ad alcuni cambiamenti che potranno avvenire nell'ambiente circostante nel quale è situato. Occorre, quindi, definire la gestione di questi cambiamenti in modo che durante l'esecuzione delle azioni previste, nel caso di rilevamento di un cambiamento, il robot possa reagire di conseguenza. In particolare si vuole fare in modo che l'azione intrapresa dal robot si blocchi e si possano eseguire azioni alternative, al termine di queste sarà necessario valutare se continuare o meno con l'esecuzione precedente che include le azioni già pianificate. Da qui in avanti viene definito \textbf{piano} come sequenza di azioni.\\
@@ -140,31 +140,21 @@ Riproponiamo\footnote{Ingegneria dei Sistemi Software A differential drive Robot
 		
 		\item 	\textbf{Azione asincrona}: si definisce un'esecuzione asincrona quando questa può essere eseguita senza che il chiamante debba attendere la fine dell'esecuzione dato che il controllo viene immediatamente restituito al chiamante.
 	\end{itemize}
-	
-	Rispetto alla fase precedente si deve considerare un sistema non più concentrato ma distribuito, infatti l'utilizzo della console remota rende necessaria la definizione della comunicazione tra quest'ultima e il robot. Dev'essere definito un comando di "halt" che la console sia in grado di inviare al robot e quest'ultimo dovrà essere in grado di interpretarlo.
-	
-	
-	Avendo appena definito i concetti principali nei capitoli precedenti, ci si rende conto che la base di partenza considerata, ovvero il linguaggio OO Java, non permette di esprimere ad un sufficiente livello di astrazione le tematiche sopra citate e il dislivello dal punto di vista tecnologico sarebbe troppo ampio da essere colmato in un unico step computazionale. Si procede quindi alla definizione di una serie di livelli di astrazione che permettano di arrivare gradualmente a definire le modalità di approccio al problema.\\
-	Il primo che occorre è la possibilità di una gestione tramite gli attori in quanto quest'ultimo modello computazionale, che si rifà ad uno stile proattivo/reattivo, riesce a modellare perfettamente il comportamento di un robot. Questo modello in realtà risiede già all'interno del framework computazionale che utilizzeremo (qActor) e potrà quindi essere considerato come assodato per le future implementazioni del problema. La base di partenza, risulta essere quindi il RobotActor, come già definito nella precedente relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Prima Parte}, esteso con la possibilità di ricevere comandi inviati dalla console remota oppure dal browser.
-	\\
-	\newline
-	\\
-	\begin{tabular}{ |c| }
-		\hline
-		Robot Actor Model\\ 
-		\hline	
-		\includegraphics[scale = 0.5]{img/Abstract.png}\\
-		\hline
-	\end{tabular}
-	\\
-	\newline
-	\\
-	E' stato detto in precedenza che per modellare correttamente il comportamento del robot occorre introdurre il concetto di automa a stati finiti, questo ci induce a passare dalla programmazione message passing quale Java a quella event based. Questo ci permette di definire che il cambiamento che permette di eseguire la transizione da uno stato all'altro dell'automa può essere identificato come un \textbf{evento}. In questo modo si vuole ottenere una entità reattiva che nel momento in cui esegue un'azione possa comunque essere sensibile a determinati "cambiamenti". Infatti, supponendo di essere in uno stato in cui viene eseguita una determinata azione, il robot si mantiene reattivo e nel momento in cui riceve un particolare evento è in grado transitare in un determinato stato che permetta la gestione dell'evento stesso.\\
-	In particolare, con questa modellazione, si è in grado di definire un evento che viene lanciato al termine dell'esecuzione di un azione sincrona/asincrona.
-	Ovviamente per un particolare stato possono essere definiti più eventi ai quali il robot dev'essere sensibile ed altrettante transizioni di stato che permettano di gestirli. In un contesto generale, quando viene ricevuto un evento di "halt", che provoca una transizione di stato, esso viene gestito eseguendo un piano alternativo e fermando l'azione eseguita in precedenza. Nel caso del contesto specifico questo non è necessario in quanto, l'esecuzione di una nuova azione da parte del robot, interrompe/termina automaticamente quella precedente.
 \end{quotation}
 
+\section{Abstraction Gap}
 
+L'implementazione di quanto descritto precedentemente può essere realizzata utilizzando il linguaggio Java, seguendo questo approccio però non si è in grado di esprimere ad un sufficiente livello di astrazione le tematiche sopra citate e si nota come il dislivello dal punto di vista tecnologico sarebbe troppo ampio per essere colmato in un unico step computazionale, comportando inoltre un'elevato dispendio di tempo.\\
+Per ovviare a questo, puntando a rendere più semplice la fase implementativa, si decide di sfruttare un'infrastruttura composta da una serie di framework quali: \textbf{QActor} e \textbf{QEvent} proposta nel corso di ?Ingegneria dei Sistemi Software?. Di seguito verrano proposti i concetti fondamentali alla base di tale infrastruttura utili per un'utilizzo ottimale della stessa.\\
+QActors è un framework custom utile a mostrare come i progettisti affrontano l'analisi, la progettazione e l'implementazione di sistemi software utilizzando uno stile a message-passing piuttosto che un stile tradizionale basato sugli oggetti. Un QActor è un'entità attiva che ha lo scopo di eseguire le operazioni di base, quali la ricezione e l'invio di un messaggio, ma può anche eseguire un comportamento espresso da un piano, sequenza di azioni/attività che hanno un tempo finito per essere eseguite. Questo tipo di modello computazionale potrà essere considerato come assodato per le future implementazioni del problema.
+I QActors sono stati utilizzati anche nella prima fase di progetto, pur non essendo strettamente necessari in un sistema concentrato che non ha l'esigenza di considerare la comunicazione attraverso la rete. In particolare come base di partenza si è utilizzata l'entità RobotActor, che deriva da QActor, e permette l'interazione con il BaseRobot.
+Nella seconda fase invece, il contesto da prendere in considerazione è distribuito, in quanto è necessario interagire con il robot per interrompere un'azione, anche in questo caso sarà utilizzata l'entità RobotActor esteso con la possibilità di ricevere comandi inviati dalla console remota oppure dal browser. Possiamo, quindi, considerare come primo modello per gestire la comunicazione quello a message-passing. In questo caso, però, eseguendo un'azione di una durata prefissata non saremo in grado di interromperla in alcun modo (in quanto questo modello non è proattivo/reattivo).\\
+Prendendo in considerazione la possibilità di gestire le azioni eseguite dal robot come un automa a stati finiti e considerando il contesto distribuito nel quale ci troviamo, quindi la presenza della rete, per poter gestire i cambiamenti ai quali il robot deve reagire è necessario introdurre il concetto di Evento e più precisamente QEvent. 
+QEvent è un framework che permette l'implementazione di sistemi software eternogenei in grado di adottare un modello event-driven. Un evento è un'informazione che viene emessa da una sorgente, che può essere esterna nel caso in cui la sorgente sia fisica come la console remota o interna nel caso in cui la sorgente sia un componente software come il robot.\\ 
+Questo ci permette di definire che il cambiamento che permette di eseguire la transizione da uno stato all'altro dell'automa può essere identificato come un evento. In questo modo si vuole ottenere una entità reattiva che nel momento in cui esegue un'azione possa comunque essere sensibile a determinati "cambiamenti". Infatti, supponendo di essere in uno stato in cui viene eseguita una determinata azione, il robot si mantiene reattivo e nel momento in cui riceve un particolare evento è in grado transitare in un determinato stato che permetta la
+gestione dell'evento stesso.
+In particolare, con questa modellazione, si è in grado di definire un evento che viene lanciato al termine dell?esecuzione di un azione sincrona/asincrona. Ovviamente per un particolare stato possono essere definiti più eventi ai quali il robot dev'essere sensibile ed altrettante transizioni di stato che permettano di gestirli. In un contesto generale, quando viene ricevuto un evento di "halt", che provoca una transizione di stato, esso viene gestito eseguendo un piano alternativo e fermando l?azione eseguita in precedenza. Nel caso del contesto specifico questo non è necessario in quanto, l'esecuzione di una nuova azione da parte del robot, interrompe/termina automaticamente quella precedente.
+Ogni azione eseguita dal robot verrà, quindi, modellata come automa a stati finiti con tante transizioni in diversi stati, quanti saranno gli eventi che potranno essere ricevuti. Per poter realizzare un'azione che durante la sua esecuzione possa essere interrotta, si ha la necessità di un'entità distinta che si occupi di percepire e reagire gli eventuali eventi ricevuti, ovvero un \textbf{EventHandler}. A sua volta quest'entità avrà il compito di interrompere l'effettiva esecuzione dell'azione sul robot.
 \section{Future Work}
 
 \newpage
