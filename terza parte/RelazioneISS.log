@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  30 JUL 2015 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.3)  30 JUL 2015 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -156,7 +156,38 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+\captionmargin=\dimen126
+\captionmargin@=\dimen127
+\captionwidth=\dimen128
+\caption@tempdima=\dimen129
+\caption@indent=\dimen130
+\caption@parindent=\dimen131
+\caption@hangindent=\dimen132
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\bfseries
+ #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempbox
+a \hfil }\fi \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count117
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -165,14 +196,10 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 ) (./manifest.sty
 File: manifest.sty 2010/03/09 Package for adding categories, terms and keywords
  to llncs style
-\catcount=\count117
+\catcount=\count118
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
-)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -193,10 +220,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count118
+\Gread@gobject=\count119
 ))
-\Gin@req@height=\dimen126
-\Gin@req@width=\dimen127
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
 )
 (./RelazioneISS.aux)
 \openout1 = `RelazioneISS.aux'.
@@ -213,19 +240,32 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
 LaTeX Font Info:    ... okay on input line 106.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
 LaTeX Font Info:    ... okay on input line 106.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {
+\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname }{
+\ignorespaces #2}}\begingroup \@parboxrestore \@makecaption {\csname fnum@#1\en
+dcsname }{\ignorespaces #3}\par \endgroup .
 
+
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen128
+\scratchcounter=\count120
+\scratchdimen=\dimen135
 \scratchbox=\box54
-\nofMPsegments=\count120
-\nofMParguments=\count121
+\nofMPsegments=\count121
+\nofMParguments=\count122
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen129
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen136
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -331,54 +371,128 @@ Overfull \hbox (11.19815pt too wide) in paragraph at lines 141--142
 ne as-in-crona quando questa
  []
 
-[2] [3] <img/ale.jpg, id=23, 171.4405pt x 200.75pt>
+[2] <img/Xtext_gen.jpg, id=20, 210.3057pt x 112.5003pt>
+File: img/Xtext_gen.jpg Graphic file (type jpg)
+
+<use img/Xtext_gen.jpg>
+Package pdftex.def Info: img/Xtext_gen.jpg used on input line 169.
+(pdftex.def)             Requested size: 126.18439pt x 67.50069pt.
+ <img/xtext.jpg, id=21, 324.4923pt x 59.9841pt>
+File: img/xtext.jpg Graphic file (type jpg)
+
+<use img/xtext.jpg>
+Package pdftex.def Info: img/xtext.jpg used on input line 183.
+(pdftex.def)             Requested size: 194.69687pt x 35.99072pt.
+File: img/xtext.jpg Graphic file (type jpg)
+ <use img/xtext.jpg>
+Package pdftex.def Info: img/xtext.jpg used on input line 196.
+(pdftex.def)             Requested size: 194.69687pt x 35.99072pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Overfull \hbox (2.79102pt too wide) in paragraph at lines 161--200
+\T1/cmr/m/n/10 doverlo ri-com-pi-lare ad ogni mod-i-fica ef-fet-tuata. L'approc
+cio garan-tito dall'utilizzo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--200
+
+ []
+
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./img/Xtext_gen.jpg> <./img/xtext.jpg>] <img/ale.jpg, id=28, 171.4405pt x 
+200.75pt>
 File: img/ale.jpg Graphic file (type jpg)
- <use img/ale.jpg>
-Package pdftex.def Info: img/ale.jpg used on input line 176.
+
+<use img/ale.jpg>
+Package pdftex.def Info: img/ale.jpg used on input line 216.
 (pdftex.def)             Requested size: 102.86508pt x 120.45091pt.
-
-<img/bea.jpg, id=24, 168.63pt x 196.48407pt>
+ <img/bea.jpg, id=29, 168.63pt x 196.48407pt>
 File: img/bea.jpg Graphic file (type jpg)
- <use img/bea.jpg>
-Package pdftex.def Info: img/bea.jpg used on input line 176.
-(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
 
-<img/io.jpg, id=25, 177.66376pt x 188.705pt>
+<use img/bea.jpg>
+Package pdftex.def Info: img/bea.jpg used on input line 216.
+(pdftex.def)             Requested size: 101.17877pt x 117.89134pt.
+ <img/io.jpg, id=30, 177.66376pt x 188.705pt>
 File: img/io.jpg Graphic file (type jpg)
- <use img/io.jpg>
-Package pdftex.def Info: img/io.jpg used on input line 176.
+
+<use img/io.jpg>
+Package pdftex.def Info: img/io.jpg used on input line 216.
 (pdftex.def)             Requested size: 106.59906pt x 113.22386pt.
 
 No file RelazioneISS.bbl.
-[4 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[5 <./img/ale.jpg> <./img/bea.jpg> <./img/io.jpg>] (./RelazioneISS.aux) ) 
 Here is how much of TeX's memory you used:
- 2724 strings out of 493117
- 35968 string characters out of 6135434
- 112272 words of memory out of 5000000
- 6144 multiletter control sequences out of 15000+600000
+ 3773 strings out of 493117
+ 55040 string characters out of 6135434
+ 124968 words of memory out of 5000000
+ 7186 multiletter control sequences out of 15000+600000
  14860 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,23p,730b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on RelazioneISS.pdf (4 pages, 239969 bytes).
+ 37i,11n,38p,729b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/
+local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on RelazioneISS.pdf (5 pages, 523563 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
