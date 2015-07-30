@@ -127,7 +127,7 @@
 
 \section{Problem Analysis}
 
-Riproponiamo alcuni concetti relativi all'analisi del problema presentati nella precedente relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Seconda Parte}, utili contestualizzare questo lavoro:
+Riproponiamo alcuni concetti relativi all'analisi del problema presentati nella precedente relazione\footnote{Ingegneria dei Sistemi Software A differential drive Robot Seconda Parte}, utili nella contestualizzazione di questo lavoro:
 \begin{quotation}\itshape
 	"Visto il contesto nel quale ci si pone, le problematiche identificate hanno portato, come citato all'interno dell'analisi dei requisiti, alla definizione di una serie di concetti per le varie modalità di esecuzione delle azioni. Occorre identificare una modalità che ci permetta di astrarre dallo specifico problema in gioco (ovvero quello dei robot) e che ci consenta di definire una soluzione generale alla problematica, sfruttando il robot come approccio, definendo i concetti validi anche per future fasi evolutive del progetto. I requisiti ci portano a riconoscere una serie di problematiche delle quali ci andremo ad occupare: definizioni di azioni sincrone/asicrone ed azioni interrompibili.\\
 	Ponendoci nel contesto di esempio, il robot deve essere sensibile ad alcuni cambiamenti che potranno avvenire nell'ambiente circostante nel quale è situato. Occorre, quindi, definire la gestione di questi cambiamenti in modo che durante l'esecuzione delle azioni previste, nel caso di rilevamento di un cambiamento, il robot possa reagire di conseguenza. In particolare si vuole fare in modo che l'azione intrapresa dal robot si blocchi e si possano eseguire azioni alternative, al termine di queste sarà necessario valutare se continuare o meno con l'esecuzione precedente che include le azioni già pianificate. Da qui in avanti viene definito \textbf{piano} come sequenza di azioni.\\
@@ -159,41 +159,41 @@ Ogni azione eseguita dal robot verrà, quindi, modellata come automa a stati fini
 \section{Future Work}
 
 Dalle problematiche emerse in fase di analisi dell'applicazione proposta, e dalle soluzioni trovate, si nota come occorra un metodo per formalizzare in maniera adeguata i concetti appresi, così da poterli riutilizzare nel risolvere future problematiche che presentano caratteristiche simili a quelle affrontate.\\
-Nasce quindi l'esigenza di definire una meta-modellazione di concetti che permetta di costruire e sviluppare delle regole e delle teorie applicabili a problematiche simili. Il passo successivo prevede la definizione di un \textbf{linguaggio custom}, in questo caso \textbf{domain specific}, che consenta una produzione di codice automatizzata e che permetta di abbattere i costi realizzativi legati alle soluzioni identificate ed inoltre permette di passare automaticamente da una modellazione dichiarativa del funzionamento del sistema a codice eseguibile favorendo una veloce prototipazione.\\
-Avendo definito i concetti necessari all'interno dell'infrastruttura, della quale ci siamo avvalsi per riuscire a risolvere il problema proposto, si vogliono formalizzare questi concetti che rappresentano il meta-modellodi partenza. Per la definizione di un linguaggio custom ci si avvale della tecnlogia \textbf{Xtext} la quale ci permette di abbattere i tempi realizzativi da diversi mesi a pochi giorni. Xtext è una tecnologia open source che permette di generare il \textbf{parser}, il \textbf{lexer}, un \textbf{editor guidato della grammatica} oltre ad altre fuzionalità.
+Nasce quindi l'esigenza di definire una meta-modellazione di concetti che permetta di costruire e sviluppare delle regole e delle teorie applicabili a problematiche simili. Il passo successivo prevede la definizione di un \textbf{linguaggio custom}, in questo caso \textbf{domain specific}, che consenta una produzione di codice automatizzata e che permetta di abbattere i costi realizzativi legati alle soluzioni identificate ed inoltre garantisca di passare automaticamente da una modellazione dichiarativa del funzionamento del sistema a codice eseguibile, favorendo una veloce prototipazione.\\
+Avendo definito i concetti necessari all'interno dell'infrastruttura, della quale ci siamo avvalsi per riuscire a risolvere il problema proposto, si vogliono formalizzare questi concetti che rappresentano il meta-modello di partenza. Per la definizione di un linguaggio custom ci si avvale della tecnlogia \textbf{Xtext} la quale ci permette di abbattere i tempi realizzativi da diversi mesi a pochi giorni. Xtext è una tecnologia open source che permette di generare il \textbf{parser}, il \textbf{lexer}, un \textbf{editor guidato della grammatica} oltre ad altre fuzionalità.
 \\
 \newline
 \\
 \begin{tabular}{ c }
 	\hline	
-	\includegraphics[scale = 0.6]{img/Xtext_gen.jpg}\\
+	\includegraphics[scale = 0.8]{img/Xtext_gen.jpg}\\
 	\hline
 	\centering \footnotesize Xtext
 \end{tabular}
 \\
 \newline
 \\
-L'utilizzo della tecnologia del DSL risulta essere utile inoltre perchè fornisce un modello formale, secondo le tre dimensioni fondamentali di analisi, quali struttura, interazione e comportamento, del sistema in esame evitando le problematiche alle quale l'uso di UML non riesce a fare fronte.\\
+L'utilizzo della tecnologia del DSL risulta essere utile inoltre perchè fornisce un modello formale, secondo le tre dimensioni fondamentali di analisi, quali struttura, interazione e comportamento del sistema in esame, evitando le problematiche alle quale l'uso di UML non riesce a fare fronte.\\
 Il linguaggio in cui è definito il meta-modello prende il nome di \textbf{Ecore} e i concetti che vengono mappati all'interno del linguaggio sono quelli contenuti nei QActor e nei QEvent precedentemente presentati.
 \\
 \newline
 \\
 \begin{tabular}{ c }
 	\hline	
-	\includegraphics[scale = 0.6]{img/xtext.jpg}\\
+	\includegraphics[scale = 0.8]{img/xtext.jpg}\\
 	\hline
 	\footnotesize Utilizzo del framework Xtext per l'implementazione del DSL
 \end{tabular}
 \\
 \newline
 \\
-Realizzando un linguaggio di programmazione specifico per il contesto dei robot, è più opportuno scegliere un linguaggio che sia interpretato, in modo da non doverlo ricompilare ad ogni modifica effettuata. L'approccio garantito dall'utilizzo della tecnlogia xtext, è sia compilato che interpretato infatti posso sia generare codice Java che dev'essere compilato, sia utilizzare codice, come nel caso di plan.txt (nel quale viene specificata la serie di azioni che il robot deve eseguire),  che dev'essere interpretato ed eseguito dal robot senza bisogno di essere compilato.
+Realizzando un linguaggio di programmazione specifico per il contesto dei robot, è più opportuno scegliere un linguaggio che sia interpretato, in modo da non doverlo ricompilare ad ogni modifica effettuata. L'approccio garantito dall'utilizzo della tecnlogia xtext, permette di ottenere codice sia compilato che interpretato infatti, nel DSL in questione è possibile sia generare codice Java che dev'essere compilato, sia utilizzare codice, come nel caso di plan.txt (nel quale viene specificata la serie di azioni che il robot deve eseguire),  che dev'essere interpretato ed eseguito dal robot senza bisogno di essere ricompilato.
 \\
 \newline
 \\
 \begin{tabular}{ c }
 	\hline	
-	\includegraphics[scale = 0.6]{img/xtext.jpg}\\
+	\includegraphics[scale = 0.8]{img/utente-xtext.jpg}\\
 	\hline
 	\centering \footnotesize Utilizzo del framework Xtext dall'utente
 \end{tabular}
